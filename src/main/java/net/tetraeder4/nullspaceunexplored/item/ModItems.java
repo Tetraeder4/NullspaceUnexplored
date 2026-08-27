@@ -22,10 +22,6 @@ public class ModItems {
 
     public static void registerModItems() {
         NullspaceUnexplored.LOGGER.info("Registering Mod Items for " + NullspaceUnexplored.MOD_ID);
-
-        //CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
-        //    output.accept(DRYWALL_DEBRIS);
-        //});
     }
 }
 
