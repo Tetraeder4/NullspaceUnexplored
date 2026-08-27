@@ -1,5 +1,6 @@
 package net.tetraeder4.nullspaceunexplored.block;
 
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.tetraeder4.nullspaceunexplored.NullspaceUnexplored;
 import net.minecraft.core.Registry;
@@ -11,18 +12,24 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
+import java.util.function.Function;
 
-private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
-    Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name))));
-    registerBlockItem(name, toRegister);
-    return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name), toRegister);
-}
+public class ModBlocks {
+    public static final Block BACKROOMS_WALL_BLOCK = registerBlock("backrooms_wall_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
 
-private static void registerBlockItem(String name, Block block) {
-    Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name),
-            new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
-                    .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name)))));
-}
+    private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
+        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name))));
+        registerBlockItem(name, toRegister);
+        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name), toRegister);
+    }
+
+    private static void registerBlockItem(String name, Block block) {
+        Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name),
+                new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
+                        .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name)))));
+    }
 
     public static void registerModBlocks() {
         NullspaceUnexplored.LOGGER.info("Registering Blocks for " + NullspaceUnexplored.MOD_ID);
