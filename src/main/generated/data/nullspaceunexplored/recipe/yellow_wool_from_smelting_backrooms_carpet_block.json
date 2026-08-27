@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "Backrooms",
+  "ingredient": "nullspaceunexplored:backrooms_carpet_block",
+  "result": {
+    "id": "minecraft:yellow_wool"
+  }
+}

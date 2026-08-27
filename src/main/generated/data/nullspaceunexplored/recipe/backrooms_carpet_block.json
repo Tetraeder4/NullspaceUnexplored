@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "Backrooms",
+  "key": {
+    "B": "minecraft:water_bucket",
+    "W": "minecraft:yellow_wool"
+  },
+  "pattern": [
+    "WWW",
+    "WBW",
+    "WWW"
+  ],
+  "result": {
+    "count": 8,
+    "id": "nullspaceunexplored:backrooms_carpet_block"
+  }
+}

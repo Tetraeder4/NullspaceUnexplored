@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_drywall_debris": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nullspaceunexplored:drywall_debris"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nullspaceunexplored:backrooms_wall_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_drywall_debris"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nullspaceunexplored:backrooms_wall_block"
+    ]
+  }
+}
