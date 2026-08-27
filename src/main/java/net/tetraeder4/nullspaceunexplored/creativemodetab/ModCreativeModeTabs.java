@@ -17,7 +17,7 @@ public class ModCreativeModeTabs {
     public static final CreativeModeTab FLUORITE_ITEM_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
             Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, "backrooms_items"),
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModItems.DRYWALL_DEBRIS))
-                    .title(Component.translatable("creativemodetab.nullspaceunexplored.backrooms_items.backrooms_items"))
+                    .title(Component.translatable("creativemodetab.nullspaceunexplored.backrooms_items"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.DRYWALL_DEBRIS);
 
