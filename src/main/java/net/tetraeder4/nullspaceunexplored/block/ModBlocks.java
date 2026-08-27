@@ -15,9 +15,13 @@ import net.minecraft.world.level.block.Block;
 import java.util.function.Function;
 
 public class ModBlocks {
+    //List Block, then add to creative inventory,generate model and add texture and lang file
     public static final Block BACKROOMS_WALL_BLOCK = registerBlock("backrooms_wall_block",
             properties -> new Block(properties.strength(4f)
-                    .requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
+                    .requiresCorrectToolForDrops().sound(SoundType.CHISELED_BOOKSHELF)));
+    public static final Block BACKROOMS_CARPET_BLOCK = registerBlock("backrooms_carpet_block",
+            properties -> new Block(properties.strength(2f)
+                    .sound(SoundType.WET_SPONGE)));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name))));

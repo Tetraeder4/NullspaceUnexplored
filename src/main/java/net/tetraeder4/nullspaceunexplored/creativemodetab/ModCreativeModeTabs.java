@@ -14,7 +14,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class ModCreativeModeTabs {
 
-    public static final CreativeModeTab FLUORITE_ITEM_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
+    public static final CreativeModeTab BACKROOMS_ITEM_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
             Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, "backrooms_items"),
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModItems.DRYWALL_DEBRIS))
                     .title(Component.translatable("creativemodetab.nullspaceunexplored.backrooms_items"))
@@ -30,6 +30,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.nullspaceunexplored.backrooms_blocks"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.BACKROOMS_WALL_BLOCK);
+                        output.accept(ModBlocks.BACKROOMS_CARPET_BLOCK);
                     }).build());
 
 
