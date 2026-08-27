@@ -43,7 +43,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("DD")
                         .define('D', ModItems.DRYWALL_DEBRIS)
                         .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
-                        .group("Backrooms").save(output);
+                        .group("Backrooms").save(output, "drywall_from_debris");
+
+                shapeless(RecipeCategory.MISC, ModBlocks.BACKROOMS_WALL_BLOCK, 8)
+                        .requires(Items.SAND, 4)
+                        .requires(Items.GRAVEL, 4)
+                        .requires(Items.PAPER, 1)
+                        .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
+                        .group("Backrooms").save(output, "drywall_from_sand_gravel_paper");
 
             }
         };
