@@ -17,7 +17,7 @@ import java.util.function.Function;
 public class ModBlocks {
     //List Block, then add to creative inventory,generate model and add texture and lang file
     public static final Block BACKROOMS_WALL_BLOCK = registerBlock("backrooms_wall_block",
-            properties -> new Block(properties.strength(4f)
+            properties -> new Block(properties.strength(8f)
                     .requiresCorrectToolForDrops().sound(SoundType.CHISELED_BOOKSHELF)));
     public static final Block BACKROOMS_CARPET_BLOCK = registerBlock("backrooms_carpet_block",
             properties -> new Block(properties.strength(2f)
