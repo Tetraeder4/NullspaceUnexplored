@@ -23,7 +23,7 @@ public class ModBlocks {
             properties -> new Block(properties.strength(8f)
                     .requiresCorrectToolForDrops().sound(SoundType.CHISELED_BOOKSHELF)));
     public static final Block BACKROOMS_CARPET_BLOCK = registerBlock("backrooms_carpet_block",
-            properties -> new Block(properties.strength(2f)
+            properties -> new Block(properties.strength(2f).speedFactor(0.8f)
                     .sound(SoundType.WET_SPONGE)));
     public static final Block BACKROOMS_LAMP_BLOCK = registerBlock("backrooms_lamp_block",
             properties -> new BackroomsLampBlock(properties.strength(3f)
@@ -32,7 +32,7 @@ public class ModBlocks {
                    properties -> new CeilingPanel(properties.strength(2f)
                            .sound(SoundType.WOOL)));
     public static final Block CEILING_SUPPORT = registerBlock("ceiling_support",
-            properties -> new Block(properties.strength(8f).requiresCorrectToolForDrops()));
+            properties -> new Block(properties.strength(8f).requiresCorrectToolForDrops().noOcclusion().sound(SoundType.CHAIN)));
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
