@@ -29,6 +29,8 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     public void generate() {
         dropSelf(ModBlocks.BACKROOMS_CARPET_BLOCK);
         add(ModBlocks.BACKROOMS_WALL_BLOCK, createMultipleDrops(ModBlocks.BACKROOMS_WALL_BLOCK, ModItems.DRYWALL_DEBRIS, 2.0f, 4.0f));
+
+        dropSelf(ModBlocks.BACKROOMS_LAMP_BLOCK);
     }
 
     public LootTable.Builder createMultipleDrops(final Block block, Item item, float minDrops, float maxDrops) {

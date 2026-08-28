@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
 
 import java.util.function.Function;
 
@@ -22,6 +23,10 @@ public class ModBlocks {
     public static final Block BACKROOMS_CARPET_BLOCK = registerBlock("backrooms_carpet_block",
             properties -> new Block(properties.strength(2f)
                     .sound(SoundType.WET_SPONGE)));
+    public static final Block BACKROOMS_LAMP_BLOCK = registerBlock("backrooms_lamp_block",
+            properties -> new BackroomsLampBlock(properties.strength(3f)
+                    .requiresCorrectToolForDrops().lightLevel(state -> state.getValue(BackroomsLampBlock.CLICKED) ? 15 : 0)));
+
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name))));
