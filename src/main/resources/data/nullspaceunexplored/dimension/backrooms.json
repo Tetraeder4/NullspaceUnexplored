@@ -3,7 +3,7 @@
   "generator": {
     "type": "minecraft:flat",
     "settings": {
-      "biome": "minecraft:plains",
+      "biome": "nullspaceunexplored:nullspace",
       "layers": [
         {
           "block": "nullspaceunexplored:backrooms_carpet_block",
