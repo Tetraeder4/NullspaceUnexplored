@@ -6,7 +6,6 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
-import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TexturedModel;
@@ -26,6 +25,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.BACKROOMS_WALL_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.BACKROOMS_CARPET_BLOCK);
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_PANEL);
 
         Identifier lampOffIdentifier = TexturedModel.CUBE.create(ModBlocks.BACKROOMS_LAMP_BLOCK, blockModelGenerators.modelOutput);
         Identifier lampOnIdentifier = blockModelGenerators.createSuffixedVariant(ModBlocks.BACKROOMS_LAMP_BLOCK, "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube);
@@ -34,6 +34,9 @@ public class ModModelProvider extends FabricModelProvider {
                 .with(BlockModelGenerators.createBooleanModelDispatch(BackroomsLampBlock.CLICKED,
                         new MultiVariant(WeightedList.<Variant>builder().add(new Variant(lampOnIdentifier)).build()),
                         new MultiVariant(WeightedList.<Variant>builder().add(new Variant(lampOffIdentifier)).build()))));
+
+
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_SUPPORT);
     }
 
     @Override

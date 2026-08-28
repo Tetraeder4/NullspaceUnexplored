@@ -1,3 +1,6 @@
 // 26.1.2	-999999999-01-01T00:00:00	Nullspace Unexplored/Block Loot Tables
 836a7646a6adff3e7eced6a227784546725659ad data/nullspaceunexplored/loot_table/blocks/backrooms_carpet_block.json
+e6633dd7cdb047e038bb9c39ba37d22478f4a5e3 data/nullspaceunexplored/loot_table/blocks/backrooms_lamp_block.json
 090878cee74d1d6b9df555af1fbe407683b11e95 data/nullspaceunexplored/loot_table/blocks/backrooms_wall_block.json
+b4e522d88903385c90d3edd925d7484e53747b87 data/nullspaceunexplored/loot_table/blocks/ceiling_panel.json
+defa09924d1ac77d29492883e850da3af9651388 data/nullspaceunexplored/loot_table/blocks/ceiling_support.json

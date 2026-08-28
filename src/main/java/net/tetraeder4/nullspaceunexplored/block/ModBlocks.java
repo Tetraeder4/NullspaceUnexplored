@@ -1,5 +1,6 @@
 package net.tetraeder4.nullspaceunexplored.block;
 
+import net.minecraft.world.level.block.HayBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.tetraeder4.nullspaceunexplored.NullspaceUnexplored;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
+import net.tetraeder4.nullspaceunexplored.block.custom.CeilingPanel;
 
 import java.util.function.Function;
 
@@ -26,6 +28,11 @@ public class ModBlocks {
     public static final Block BACKROOMS_LAMP_BLOCK = registerBlock("backrooms_lamp_block",
             properties -> new BackroomsLampBlock(properties.strength(3f)
                     .requiresCorrectToolForDrops().lightLevel(state -> state.getValue(BackroomsLampBlock.CLICKED) ? 15 : 0)));
+    public static final Block CEILING_PANEL = registerBlock("ceiling_panel",
+                   properties -> new CeilingPanel(properties.strength(2f)
+                           .sound(SoundType.WOOL)));
+    public static final Block CEILING_SUPPORT = registerBlock("ceiling_support",
+            properties -> new Block(properties.strength(8f).requiresCorrectToolForDrops()));
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {

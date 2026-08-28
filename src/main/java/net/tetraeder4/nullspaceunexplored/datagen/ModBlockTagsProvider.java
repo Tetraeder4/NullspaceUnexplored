@@ -16,10 +16,12 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider registries) {
         valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.BACKROOMS_WALL_BLOCK);
+                .add(ModBlocks.BACKROOMS_WALL_BLOCK)
+                .add(ModBlocks.CEILING_SUPPORT);
 
         valueLookupBuilder(BlockTags.MINEABLE_WITH_HOE)
-                .add(ModBlocks.BACKROOMS_CARPET_BLOCK);
+                .add(ModBlocks.BACKROOMS_CARPET_BLOCK)
+                .add(ModBlocks.CEILING_PANEL);
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.BACKROOMS_WALL_BLOCK);

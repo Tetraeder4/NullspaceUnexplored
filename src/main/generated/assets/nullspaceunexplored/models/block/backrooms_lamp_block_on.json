@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "nullspaceunexplored:block/backrooms_lamp_block_on"
+  }
+}

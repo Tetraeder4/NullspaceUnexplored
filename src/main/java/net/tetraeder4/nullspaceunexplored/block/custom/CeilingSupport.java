@@ -7,10 +7,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class CeilingPanel extends Block {
-    public static final VoxelShape SHAPE = Block.box(0,0,0,16,3,16);
+public class CeilingSupport extends Block {
+    public static final VoxelShape SHAPE =Block.box(2,0,2,14,13,14);
 
-    public CeilingPanel(Properties properties) {
+    public CeilingSupport(Properties properties) {
         super(properties);
     }
 
@@ -19,4 +19,3 @@ public class CeilingPanel extends Block {
         return SHAPE;
     }
 }
-
