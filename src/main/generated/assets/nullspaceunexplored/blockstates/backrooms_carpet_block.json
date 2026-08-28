@@ -1,7 +1,26 @@
 {
   "variants": {
-    "": {
-      "model": "nullspaceunexplored:block/backrooms_carpet_block"
-    }
+    "": [
+      {
+        "model": "nullspaceunexplored:block/backrooms_carpet_block",
+        "y": 0,
+        "weight": 1
+      },
+      {
+        "model": "nullspaceunexplored:block/backrooms_carpet_block",
+        "y": 90,
+        "weight": 1
+      },
+      {
+        "model": "nullspaceunexplored:block/backrooms_carpet_block",
+        "y": 180,
+        "weight": 1
+      },
+      {
+        "model": "nullspaceunexplored:block/backrooms_carpet_block",
+        "y": 270,
+        "weight": 1
+      }
+    ]
   }
 }
