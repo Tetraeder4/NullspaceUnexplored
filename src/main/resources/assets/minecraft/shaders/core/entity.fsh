@@ -136,5 +136,3 @@ void main() {
         FogColor
     );
 }
-
-//by DR7 https://modrinth.com/user/DR7

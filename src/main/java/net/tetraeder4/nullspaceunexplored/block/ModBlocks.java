@@ -16,7 +16,7 @@ import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
 import java.util.function.Function;
 
 public class ModBlocks {
-    //List Block, then add to creative inventory,generate model and add texture and lang file
+    //List Block, then add to creative inventory, generate model + itemmodel and add texture and lang file
     public static final Block BACKROOMS_WALL_BLOCK = registerBlock("backrooms_wall_block",
             properties -> new Block(properties.strength(8f)
                     .requiresCorrectToolForDrops().sound(SoundType.CHISELED_BOOKSHELF)));

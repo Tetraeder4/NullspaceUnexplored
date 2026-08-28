@@ -83,4 +83,3 @@ float fog_cylindrical_distance(vec3 pos) {
     return max(distXZ, distY);
 }
 
-//by DR7 https://modrinth.com/user/DR7

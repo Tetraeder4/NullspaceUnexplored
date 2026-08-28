@@ -28,38 +28,8 @@ void main() {
 
     sphericalVertexDistance = fog_spherical_distance(pos);
     cylindricalVertexDistance = fog_cylindrical_distance(pos);
-    
-    vec4 vc = Color * minecraft_sample_lightmap(Sampler2, UV2);
 
-    vec3 n = normalize(Normal);
-    
-    const float BRIGHTNESS_TOP  = 1.75; 
-    const float BRIGHTNESS_SIDE  = 1.75; 
-    const float BRIGHTNESS_BOTTOM = 1.1; 
-    bool isCubeFace = (
-        abs(n.y) > 0.1 || 
-        abs(n.x) > 0.1 || 
-        abs(n.z) > 0.1  
-    );
-
-    if (isCubeFace) {
-        float faceShade = BRIGHTNESS_TOP; 
-
-        if (n.y > 0.5) {
-            faceShade = BRIGHTNESS_TOP;
-        }
-        else if (n.y < -0.5) {
-            faceShade = BRIGHTNESS_BOTTOM;
-        }
-        else if (abs(n.x) > 0.5 || abs(n.z) > 0.5) {
-            faceShade = BRIGHTNESS_SIDE;
-        }
-
-        vc.rgb *= faceShade;
-    }
-
-    vertexColor = vc;
+    // Default vertex lightmap sampling without exaggerated multipliers
+    vertexColor = Color * minecraft_sample_lightmap(Sampler2, UV2);
     texCoord0 = UV0;
 }
-
-//by DR7 https://modrinth.com/user/DR7

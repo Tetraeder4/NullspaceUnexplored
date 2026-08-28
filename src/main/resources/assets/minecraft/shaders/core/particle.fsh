@@ -29,5 +29,3 @@ void main() {
     }
     fragColor = apply_fog(color, sphericalVertexDistance, cylindricalVertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd, FogColor);
 }
-
-//by DR7 https://modrinth.com/user/DR7

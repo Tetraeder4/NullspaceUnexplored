@@ -14,6 +14,8 @@ uniform sampler2D WeatherDepthSampler;
 uniform sampler2D CloudsSampler;
 uniform sampler2D CloudsDepthSampler;
 
+uniform vec2 OutSize;
+
 in vec2 texCoord;
 out vec4 fragColor;
 
@@ -199,7 +201,19 @@ void main() {
         finalColor = blend(finalColor, color_layers[ii]);
     }
 
-    fragColor = vec4(finalColor, 1.0);
-}
+    //blur
+    vec2 texelSize = 1.0 / OutSize;
+    vec4 color = vec4(0.0);
 
-//by DR7 https://modrinth.com/user/DR7
+    // 9-tap Gaussian / Box kernel across screen-space
+    float radius = 200.0; // Blur radius in pixels
+
+    for (float x = -1.0; x <= 1.0; x += 1.0) {
+        for (float y = -1.0; y <= 1.0; y += 1.0) {
+            vec2 offset = vec2(x, y) * texelSize * radius;
+            color += texture(MainSampler, texCoord + offset);
+        }
+    }
+
+    fragColor = color / 9.0;
+}
