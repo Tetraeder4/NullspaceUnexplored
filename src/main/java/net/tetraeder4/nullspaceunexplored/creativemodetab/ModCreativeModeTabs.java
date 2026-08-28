@@ -32,6 +32,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BACKROOMS_WALL_BLOCK);
                         output.accept(ModBlocks.BACKROOMS_CARPET_BLOCK);
                         output.accept(ModBlocks.BACKROOMS_LAMP_BLOCK);
+                        output.accept(ModBlocks.CEILING_PANEL);
                     }).build());
 
 
