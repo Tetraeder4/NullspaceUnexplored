@@ -1,0 +1,16 @@
+{
+  "type": "nullspaceunexplored:backrooms",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "nullspaceunexplored:nullspace",
+      "layers": [
+        {
+          "block": "nullspaceunexplored:backrooms_carpet_block",
+          "height": 1
+        }
+      ],
+      "structure_overrides": []
+    }
+  }
+}
