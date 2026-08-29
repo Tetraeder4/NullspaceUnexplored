@@ -26,6 +26,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.BACKROOMS_WALL_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.BACKROOMS_CARPET_BLOCK);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_PANEL);
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_SUPPORT);
 
         Identifier lampOffIdentifier = TexturedModel.CUBE.create(ModBlocks.BACKROOMS_LAMP_BLOCK, blockModelGenerators.modelOutput);
         Identifier lampOnIdentifier = blockModelGenerators.createSuffixedVariant(ModBlocks.BACKROOMS_LAMP_BLOCK, "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube);
@@ -36,7 +37,6 @@ public class ModModelProvider extends FabricModelProvider {
                         new MultiVariant(WeightedList.<Variant>builder().add(new Variant(lampOffIdentifier)).build()))));
 
 
-        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_SUPPORT);
     }
 
     @Override

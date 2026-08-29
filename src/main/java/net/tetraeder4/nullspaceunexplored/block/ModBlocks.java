@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
 import net.tetraeder4.nullspaceunexplored.block.custom.CeilingPanel;
+import net.tetraeder4.nullspaceunexplored.block.custom.CeilingSupport;
 
 import java.util.function.Function;
 
@@ -32,7 +33,8 @@ public class ModBlocks {
                    properties -> new CeilingPanel(properties.strength(2f)
                            .sound(SoundType.WOOL)));
     public static final Block CEILING_SUPPORT = registerBlock("ceiling_support",
-            properties -> new Block(properties.strength(8f).requiresCorrectToolForDrops().noOcclusion().sound(SoundType.CHAIN)));
+            properties -> new CeilingSupport(properties.strength(8f).requiresCorrectToolForDrops().noOcclusion()
+                            .sound(SoundType.CHAIN)));
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
