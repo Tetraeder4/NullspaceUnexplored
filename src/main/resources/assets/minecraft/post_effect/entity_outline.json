@@ -12,13 +12,13 @@
                     "target": "minecraft:main"
                 }
             ],
-            "output": "swap",
+            "output": "minecraft:main",
             "uniforms": {
                 "ColorConfig": [
                     {
                         "name": "RedMatrix",
                         "type": "vec3",
-                        "value": [ 1.0, 0.0, 0.0 ]
+                        "value": [ 0.0, 0.0, 0.0 ]
                     },
                     {
                         "name": "GreenMatrix",
@@ -29,31 +29,6 @@
                         "name": "BlueMatrix",
                         "type": "vec3",
                         "value": [ 0.0, 0.0, 1.0 ]
-                    }
-                ]
-            }
-        },
-        {
-            "vertex_shader": "minecraft:core/screenquad",
-            "fragment_shader": "minecraft:post/bits",
-            "inputs": [
-                {
-                    "sampler_name": "In",
-                    "target": "swap"
-                }
-            ],
-            "output": "minecraft:main",
-            "uniforms": {
-                "BitsConfig": [
-                    {
-                        "name": "Resolution",
-                        "type": "float",
-                        "value": 16.0
-                    },
-                    {
-                        "name": "MosaicSize",
-                        "type": "float",
-                        "value": 4.0
                     }
                 ]
             }

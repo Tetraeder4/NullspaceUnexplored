@@ -31,9 +31,9 @@ void main() {
     vec3 OutColor = vec3(RedValue, GreenValue, BlueValue);
 
     // Saturation
-    float Luma = dot(OutColor, Gray);
-    vec3 Chroma = OutColor - Luma;
-    OutColor = (Chroma * Saturation) + Luma;
+    //float Luma = dot(OutColor, Gray);
+    //vec3 Chroma = OutColor - Luma;
+    //OutColor = (Chroma * Saturation) + Luma;
 
     fragColor = vec4(OutColor, 1.0);
 }
