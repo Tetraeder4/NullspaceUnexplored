@@ -3,7 +3,8 @@
         "bright": {},
         "blur_horizontal": {},
         "blur_vertical": {},
-        "chromatic_abboration": {}
+        "chromatic_abboration": {},
+        "bloom_composite": {}
     },
 
     "passes": [
@@ -169,33 +170,12 @@
         },
         {
             "vertex_shader": "minecraft:core/screenquad",
-            "fragment_shader": "minecraft:post/chromatic_abboration",
-            "inputs": [
-                {
-                    "sampler_name": "In",
-                    "target": "minecraft:main",
-                    "bilinear": true
-                }
-            ],
-            "output": "chromatic_abboration",
-            "uniforms": {
-                "AbborationCompositeConfig": [
-                    {
-                        "name": "Intensity",
-                        "type": "float",
-                        "value": 200.0
-                    }
-                ]
-            }
-        },
-        {
-            "vertex_shader": "minecraft:core/screenquad",
             "fragment_shader": "minecraft:post/bloom_composite",
 
             "inputs": [
                 {
                     "sampler_name": "In",
-                    "target": "chromatic_abboration"
+                    "target": "minecraft:main"
                 },
                 {
                     "sampler_name": "Bloom",
@@ -204,7 +184,7 @@
                 }
             ],
 
-            "output": "minecraft:main",
+            "output": "bloom_composite",
 
             "uniforms": {
                 "BloomCompositeConfig": [
@@ -212,6 +192,27 @@
                         "name": "Intensity",
                         "type": "float",
                         "value": 2.0
+                    }
+                ]
+            }
+        },
+        {
+            "vertex_shader": "minecraft:core/screenquad",
+            "fragment_shader": "minecraft:post/chromatic_abboration",
+            "inputs": [
+                {
+                    "sampler_name": "In",
+                    "target": "bloom_composite",
+                    "bilinear": true
+                }
+            ],
+            "output": "minecraft:main",
+            "uniforms": {
+                "AbborationCompositeConfig": [
+                    {
+                        "name": "Intensity",
+                        "type": "float",
+                        "value": 0.03
                     }
                 ]
             }
