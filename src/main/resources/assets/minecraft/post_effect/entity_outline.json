@@ -3,7 +3,7 @@
         "bright": {},
         "blur_horizontal": {},
         "blur_vertical": {},
-        "temp": {}
+        "chromatic_abboration": {}
     },
 
     "passes": [
@@ -65,7 +65,6 @@
                 ]
             }
         },
-
         {
             "vertex_shader": "minecraft:core/screenquad",
             "fragment_shader": "minecraft:post/bloom_blur",
@@ -134,7 +133,6 @@
                 ]
             }
         },
-
         {
             "vertex_shader": "minecraft:core/screenquad",
             "fragment_shader": "minecraft:post/bloom_blur",
@@ -171,7 +169,7 @@
         },
         {
             "vertex_shader": "minecraft:core/screenquad",
-            "fragment_shader": "minecraft:post/copy",
+            "fragment_shader": "minecraft:post/chromatic_abboration",
             "inputs": [
                 {
                     "sampler_name": "In",
@@ -179,8 +177,16 @@
                     "bilinear": true
                 }
             ],
-            "output": "temp",
-            "uniforms": {}
+            "output": "chromatic_abboration",
+            "uniforms": {
+                "AbborationCompositeConfig": [
+                    {
+                        "name": "Intensity",
+                        "type": "float",
+                        "value": 200.0
+                    }
+                ]
+            }
         },
         {
             "vertex_shader": "minecraft:core/screenquad",
@@ -189,7 +195,7 @@
             "inputs": [
                 {
                     "sampler_name": "In",
-                    "target": "temp"
+                    "target": "chromatic_abboration"
                 },
                 {
                     "sampler_name": "Bloom",
