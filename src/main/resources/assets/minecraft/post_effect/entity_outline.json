@@ -25,7 +25,7 @@
                     {
                         "name": "Threshold",
                         "type": "float",
-                        "value": 0.35
+                        "value": 0.55
                     }
                 ]
             }
@@ -55,12 +55,12 @@
                     {
                         "name": "Radius",
                         "type": "float",
-                        "value": 7.0
+                        "value": 5.0
                     },
                     {
                         "name": "SampleCount",
                         "type": "float",
-                        "value": 16.0
+                        "value": 8.0
                     }
                 ]
             }
@@ -90,12 +90,81 @@
                     {
                         "name": "Radius",
                         "type": "float",
-                        "value": 7.0
+                        "value": 5.0
                     },
                     {
                         "name": "SampleCount",
                         "type": "float",
-                        "value": 16.0
+                        "value": 8.0
+                    }
+                ]
+            }
+        },
+        {
+            "vertex_shader": "minecraft:core/screenquad",
+            "fragment_shader": "minecraft:post/bloom_blur",
+
+            "inputs": [
+                {
+                    "sampler_name": "In",
+                    "target": "blur_vertical",
+                    "bilinear": true
+                }
+            ],
+
+            "output": "blur_horizontal",
+
+            "uniforms": {
+                "BloomBlurConfig": [
+                    {
+                        "name": "BlurDir",
+                        "type": "vec2",
+                        "value": [ 0.7, 0.7 ]
+                    },
+                    {
+                        "name": "Radius",
+                        "type": "float",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "SampleCount",
+                        "type": "float",
+                        "value": 8.0
+                    }
+                ]
+            }
+        },
+
+        {
+            "vertex_shader": "minecraft:core/screenquad",
+            "fragment_shader": "minecraft:post/bloom_blur",
+
+            "inputs": [
+                {
+                    "sampler_name": "In",
+                    "target": "blur_horizontal",
+                    "bilinear": true
+                }
+            ],
+
+            "output": "blur_vertical",
+
+            "uniforms": {
+                "BloomBlurConfig": [
+                    {
+                        "name": "BlurDir",
+                        "type": "vec2",
+                        "value": [ -0.7, 0.7 ]
+                    },
+                    {
+                        "name": "Radius",
+                        "type": "float",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "SampleCount",
+                        "type": "float",
+                        "value": 8.0
                     }
                 ]
             }
@@ -136,7 +205,7 @@
                     {
                         "name": "Intensity",
                         "type": "float",
-                        "value": 3.0
+                        "value": 2.0
                     }
                 ]
             }

@@ -21,16 +21,13 @@ void main() {
     float maxChannel = max(color.r, max(color.g, color.b));
     float minChannel = min(color.r, min(color.g, color.b));
 
-    float grayscale = 1.0 - (maxChannel - minChannel);
-
+    float grayness = 1.0 - (maxChannel - minChannel);
     float luminance = dot(color, vec3(0.299, 0.587, 0.114));
-
-    float brightness = mix(
-            maxChannel, luminance, grayscale * 0.5);
+    float brightness = mix(luminance, grayness, 0.35);
 
     float bloomFactor = smoothstep(
             Threshold,
-            Threshold + 0.2,
+            Threshold + 0.1,
             brightness
     );
 
