@@ -17,20 +17,11 @@ layout(std140) uniform AbborationCompositeConfig {
 
 void main() {
     vec2 uv = texCoord;
-
-    // Position relative to screen center
     vec2 centered = uv * 2.0 - 1.0;
-
-    // Radial distance, squared
     float r2 = dot(centered, centered);
 
-    // Chromatic aberration strength
     float strength = Intensity * r2;
-
-    // Radial distortion direction
     vec2 offset = centered * strength;
-
-    // RGB samples
     vec3 color;
 
     color.r = texture(InSampler, uv + offset).r;
