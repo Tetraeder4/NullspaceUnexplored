@@ -20,7 +20,7 @@ void main() {
     vec3 original = texture(InSampler, texCoord).rgb;
     vec3 bloom = texture(BloomSampler, texCoord).rgb;
 
-    vec3 color = original + bloom * Intensity;
+    vec3 color = original + (bloom * Intensity);
 
     fragColor = vec4(color, 1.0);
 }

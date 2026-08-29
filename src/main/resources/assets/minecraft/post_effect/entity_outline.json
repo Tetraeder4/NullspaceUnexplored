@@ -2,7 +2,8 @@
     "targets": {
         "bright": {},
         "blur_horizontal": {},
-        "blur_vertical": {}
+        "blur_vertical": {},
+        "temp": {}
     },
 
     "passes": [
@@ -24,7 +25,7 @@
                     {
                         "name": "Threshold",
                         "type": "float",
-                        "value": 0.95
+                        "value": 0.3
                     }
                 ]
             }
@@ -54,7 +55,12 @@
                     {
                         "name": "Radius",
                         "type": "float",
-                        "value": 2.0
+                        "value": 10.0
+                    },
+                    {
+                        "name": "SampleCount",
+                        "type": "float",
+                        "value": 16.0
                     }
                 ]
             }
@@ -72,7 +78,7 @@
                 }
             ],
 
-            "output": "blur_vertical",
+            "output": "minecraft:main",
 
             "uniforms": {
                 "BloomBlurConfig": [
@@ -84,36 +90,12 @@
                     {
                         "name": "Radius",
                         "type": "float",
-                        "value": 2.0
-                    }
-                ]
-            }
-        },
-
-        {
-            "vertex_shader": "minecraft:core/screenquad",
-            "fragment_shader": "minecraft:post/bloom_composite",
-
-            "inputs": [
-                {
-                    "sampler_name": "In",
-                    "target": "minecraft:main"
-                },
-                {
-                    "sampler_name": "BloomSampler",
-                    "target": "blur_vertical",
-                    "bilinear": true
-                }
-            ],
-
-            "output": "minecraft:main",
-
-            "uniforms": {
-                "BloomCompositeConfig": [
+                        "value": 10.0
+                    },
                     {
-                        "name": "Intensity",
+                        "name": "SampleCount",
                         "type": "float",
-                        "value": 5.0
+                        "value": 16.0
                     }
                 ]
             }

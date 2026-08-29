@@ -12,6 +12,7 @@ layout(std140) uniform SamplerInfo {
 layout(std140) uniform BloomBlurConfig {
     vec2 BlurDir;
     float Radius;
+    float SampleCount;
 };
 
 out vec4 fragColor;
@@ -20,51 +21,35 @@ void main() {
     vec2 texel = 1.0 / InSize;
 
     vec3 result = vec3(0.0);
+    float weightSum = 0.0;
 
-    result += texture(
-            InSampler,
-            texCoord
-    ).rgb * 0.227027;
+    const int MAX_SAMPLES = 16;
 
-    result += texture(
-            InSampler,
-            texCoord + BlurDir * texel * Radius
-    ).rgb * 0.1945946;
+    for (int i = 0; i < MAX_SAMPLES; i++) {
 
-    result += texture(
-            InSampler,
-            texCoord - BlurDir * texel * Radius
-    ).rgb * 0.1945946;
+        if (float(i) >= SampleCount)
+        break;
 
-    result += texture(
-            InSampler,
-            texCoord + BlurDir * texel * Radius * 2.0
-    ).rgb * 0.1216216;
+        // Center the samples around the current pixel.
+        float offset = float(i) - (SampleCount - 1.0) * 0.5;
 
-    result += texture(
-            InSampler,
-            texCoord - BlurDir * texel * Radius * 2.0
-    ).rgb * 0.1216216;
+        vec2 uv = texCoord
+        + BlurDir * texel
+        * offset
+        * Radius;
 
-    result += texture(
-            InSampler,
-            texCoord + BlurDir * texel * Radius * 3.0
-    ).rgb * 0.054054;
+        // Simple Gaussian-like weight.
+        float sigma = max(SampleCount * 0.25, 0.001);
+        float weight = exp(
+                -(offset * offset) /
+                (2.0 * sigma * sigma)
+        );
 
-    result += texture(
-            InSampler,
-            texCoord - BlurDir * texel * Radius * 3.0
-    ).rgb * 0.054054;
+        result += texture(InSampler, uv).rgb * weight;
+        weightSum += weight;
+    }
 
-    result += texture(
-            InSampler,
-            texCoord + BlurDir * texel * Radius * 4.0
-    ).rgb * 0.016216;
-
-    result += texture(
-            InSampler,
-            texCoord - BlurDir * texel * Radius * 4.0
-    ).rgb * 0.016216;
+    result /= max(weightSum, 0.0001);
 
     fragColor = vec4(result, 1.0);
 }
