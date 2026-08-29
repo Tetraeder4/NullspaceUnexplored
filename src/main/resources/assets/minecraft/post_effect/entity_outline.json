@@ -25,7 +25,7 @@
                     {
                         "name": "Threshold",
                         "type": "float",
-                        "value": 0.3
+                        "value": 0.35
                     }
                 ]
             }
@@ -55,7 +55,7 @@
                     {
                         "name": "Radius",
                         "type": "float",
-                        "value": 10.0
+                        "value": 7.0
                     },
                     {
                         "name": "SampleCount",
@@ -78,7 +78,7 @@
                 }
             ],
 
-            "output": "minecraft:main",
+            "output": "blur_vertical",
 
             "uniforms": {
                 "BloomBlurConfig": [
@@ -90,12 +90,53 @@
                     {
                         "name": "Radius",
                         "type": "float",
-                        "value": 10.0
+                        "value": 7.0
                     },
                     {
                         "name": "SampleCount",
                         "type": "float",
                         "value": 16.0
+                    }
+                ]
+            }
+        },
+        {
+            "vertex_shader": "minecraft:core/screenquad",
+            "fragment_shader": "minecraft:post/copy",
+            "inputs": [
+                {
+                    "sampler_name": "In",
+                    "target": "minecraft:main",
+                    "bilinear": true
+                }
+            ],
+            "output": "temp",
+            "uniforms": {}
+        },
+        {
+            "vertex_shader": "minecraft:core/screenquad",
+            "fragment_shader": "minecraft:post/bloom_composite",
+
+            "inputs": [
+                {
+                    "sampler_name": "In",
+                    "target": "temp"
+                },
+                {
+                    "sampler_name": "Bloom",
+                    "target": "blur_vertical",
+                    "bilinear": true
+                }
+            ],
+
+            "output": "minecraft:main",
+
+            "uniforms": {
+                "BloomCompositeConfig": [
+                    {
+                        "name": "Intensity",
+                        "type": "float",
+                        "value": 3.0
                     }
                 ]
             }
