@@ -206,13 +206,34 @@
                     "bilinear": true
                 }
             ],
-            "output": "minecraft:main",
+            "output": "chromatic_abboration",
             "uniforms": {
                 "AbborationCompositeConfig": [
                     {
                         "name": "Intensity",
                         "type": "float",
-                        "value": 0.03
+                        "value": 0.008
+                    }
+                ]
+            }
+        },
+        {
+            "vertex_shader": "minecraft:core/screenquad",
+            "fragment_shader": "minecraft:post/posterisation",
+            "inputs": [
+                {
+                    "sampler_name": "In",
+                    "target": "chromatic_abboration",
+                    "bilinear": true
+                }
+            ],
+            "output": "minecraft:main",
+            "uniforms": {
+                "PosterisationConfig": [
+                    {
+                        "name": "colorSteps",
+                        "type": "vec3",
+                        "value": [ 64.0, 64.0, 64.0 ]
                     }
                 ]
             }
