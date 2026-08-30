@@ -40,6 +40,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModBlocks.BACKROOMS_CARPET_BLOCK), has(ModBlocks.BACKROOMS_CARPET_BLOCK))
                         .group("soggy carpet").save(output);
 
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_GRATE, 4)
+                        .pattern(" W ")
+                        .pattern("W W")
+                        .pattern(" W ")
+                        .define('W', Items.IRON_BLOCK)
+                        .unlockedBy(getHasName(ModBlocks.IRON_GRATE), has(ModBlocks.IRON_GRATE))
+                        .save(output);
+
                 shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CEILING_SUPPORT,4)
                         .pattern("N N")
                         .pattern("BBB")
