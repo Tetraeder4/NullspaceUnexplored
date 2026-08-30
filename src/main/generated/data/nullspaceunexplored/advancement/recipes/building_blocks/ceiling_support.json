@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ceiling_support": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nullspaceunexplored:ceiling_support"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nullspaceunexplored:ceiling_support"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ceiling_support"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nullspaceunexplored:ceiling_support"
+    ]
+  }
+}
