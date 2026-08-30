@@ -33,6 +33,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.CEILING_PANEL);
         dropSelf(ModBlocks.BACKROOMS_LAMP_BLOCK);
         dropSelf(ModBlocks.CEILING_SUPPORT);
+        dropSelf(ModBlocks.REINFORCED_BRICK_BLOCK);
     }
 
     public LootTable.Builder createMultipleDrops(final Block block, Item item, float minDrops, float maxDrops) {

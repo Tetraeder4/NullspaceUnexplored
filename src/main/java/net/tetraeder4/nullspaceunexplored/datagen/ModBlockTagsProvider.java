@@ -17,7 +17,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
     protected void addTags(HolderLookup.Provider registries) {
         valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.BACKROOMS_WALL_BLOCK)
-                .add(ModBlocks.CEILING_SUPPORT);
+                .add(ModBlocks.CEILING_SUPPORT)
+                .add(ModBlocks.REINFORCED_BRICK_BLOCK);
 
         valueLookupBuilder(BlockTags.MINEABLE_WITH_HOE)
                 .add(ModBlocks.BACKROOMS_CARPET_BLOCK)
