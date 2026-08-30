@@ -14,6 +14,7 @@ import java.util.function.Function;
 
 public class ModItems {
     public static final Item DRYWALL_DEBRIS = registerItem("drywall_debris", Item::new);
+    public static final Item REINFORCED_BRICK = registerItem("reinforced_brick", Item::new);
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name),

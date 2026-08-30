@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "reinforced bricks",
+  "ingredient": "minecraft:brick",
+  "result": {
+    "id": "nullspaceunexplored:reinforced_brick"
+  }
+}

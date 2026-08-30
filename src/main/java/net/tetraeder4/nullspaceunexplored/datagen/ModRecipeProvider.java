@@ -27,7 +27,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             @Override
             public void buildRecipes() {
                 //also works with lists
-                oreSmelting(List.of(ModBlocks.BACKROOMS_CARPET_BLOCK), RecipeCategory.MISC, CookingBookCategory.BLOCKS, Items.YELLOW_WOOL, 0.1f, 200, "Backrooms");
+                oreSmelting(List.of(ModBlocks.BACKROOMS_CARPET_BLOCK), RecipeCategory.BUILDING_BLOCKS, CookingBookCategory.BLOCKS, Items.YELLOW_WOOL, 0.1f, 200, "soggy carpet");
+                oreSmelting(List.of(Items.BRICK), RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.REINFORCED_BRICK, 0.1f, 200, "reinforced bricks");
                 //just fyi: nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.DRYWALL_DEBRIS, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BACKROOMS_WALL_BLOCK);
 
                 shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BACKROOMS_CARPET_BLOCK, 8)
@@ -38,13 +39,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('B', Items.WATER_BUCKET)
                         .unlockedBy(getHasName(ModBlocks.BACKROOMS_CARPET_BLOCK), has(ModBlocks.BACKROOMS_CARPET_BLOCK))
                         .group("soggy carpet").save(output);
-
-                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BACKROOMS_WALL_BLOCK, 1)
-                        .pattern("DD")
-                        .pattern("DD")
-                        .define('D', ModItems.DRYWALL_DEBRIS)
-                        .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
-                        .group("drywall").save(output, "drywall_from_debris");
 
                 shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CEILING_SUPPORT,4)
                         .pattern("N N")
@@ -69,12 +63,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModBlocks.BACKROOMS_CARPET_BLOCK), has(ModBlocks.BACKROOMS_CARPET_BLOCK))
                         .group("soggy carpet").save(output);
 
+                bricksBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.REINFORCED_BRICK_BLOCK, Ingredient.of(ModItems.REINFORCED_BRICK))
+                        .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
+                        .group("drywall").save(output, "drywall_from_debris");
+
+                bricksBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BACKROOMS_WALL_BLOCK, Ingredient.of(ModItems.DRYWALL_DEBRIS))
+                        .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
+                        .group("reinforced bricks").save(output);
+
                 slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRYWALL_SLAB, ModBlocks.BACKROOMS_WALL_BLOCK);
                 slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOGGY_CARPET_SLAB, ModBlocks.BACKROOMS_CARPET_BLOCK);
 
                 wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRYWALL_WALL, ModBlocks.BACKROOMS_WALL_BLOCK);
-
-
             }
         };
     }

@@ -3,7 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "group": "Backrooms",
+  "group": "soggy carpet",
   "ingredient": "nullspaceunexplored:backrooms_carpet_block",
   "result": {
     "id": "minecraft:yellow_wool"
