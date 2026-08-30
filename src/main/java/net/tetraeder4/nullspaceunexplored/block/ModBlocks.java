@@ -36,6 +36,9 @@ public class ModBlocks {
     public static final Block REINFORCED_BRICK_BLOCK = registerBlock("reinforced_brick_block",
             properties -> new Block(properties.strength(18f).requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE_BRICKS)));
+    public static final Block IRON_GRATE = registerBlock("iron_grate",
+            properties -> new Block(properties.requiresCorrectToolForDrops().noOcclusion()
+                    .strength(8f).sound(SoundType.COPPER_GRATE)));
 
     // non full blocks
     public static final Block DRYWALL_STAIRS = registerBlock("drywall_stairs",
