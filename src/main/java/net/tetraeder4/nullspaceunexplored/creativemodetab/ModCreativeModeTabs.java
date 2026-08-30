@@ -20,7 +20,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.nullspaceunexplored.backrooms_items"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.DRYWALL_DEBRIS);
-
+                        output.accept(ModItems.REINFORCED_BRICK);
                     }).build());
 
 

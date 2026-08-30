@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "drywall",
+  "group": "reinforced bricks",
   "key": {
-    "#": "nullspaceunexplored:reinforced_brick"
+    "#": "nullspaceunexplored:drywall_debris"
   },
   "pattern": [
     "##",
@@ -11,6 +11,6 @@
   ],
   "result": {
     "count": 4,
-    "id": "nullspaceunexplored:reinforced_brick_block"
+    "id": "nullspaceunexplored:backrooms_wall_block"
   }
 }
