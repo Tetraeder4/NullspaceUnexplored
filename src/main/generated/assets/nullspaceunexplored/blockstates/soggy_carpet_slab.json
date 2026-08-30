@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nullspaceunexplored:block/soggy_carpet_slab"
+    },
+    "type=double": {
+      "model": "nullspaceunexplored:block/backrooms_carpet_block"
+    },
+    "type=top": {
+      "model": "nullspaceunexplored:block/soggy_carpet_slab_top"
+    }
+  }
+}

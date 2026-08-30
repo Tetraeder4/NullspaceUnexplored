@@ -16,6 +16,8 @@ import net.tetraeder4.nullspaceunexplored.block.ModBlocks;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
 import net.tetraeder4.nullspaceunexplored.item.ModItems;
 
+import java.rmi.MarshalledObject;
+
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricPackOutput output) {
         super(output);
@@ -23,11 +25,18 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
-        blockModelGenerators.createTrivialCube(ModBlocks.BACKROOMS_WALL_BLOCK);
-        blockModelGenerators.createTrivialCube(ModBlocks.BACKROOMS_CARPET_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.REINFORCED_BRICK_BLOCK);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_PANEL);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_SUPPORT);
+
+        blockModelGenerators.family(ModBlocks.BACKROOMS_WALL_BLOCK)
+                .stairs(ModBlocks.DRYWALL_STAIRS)
+                .slab(ModBlocks.DRYWALL_SLAB)
+                .wall(ModBlocks.DRYWALL_WALL);
+
+        blockModelGenerators.family(ModBlocks.BACKROOMS_CARPET_BLOCK)
+                .stairs(ModBlocks.SOGGY_CARPET_STAIRS)
+                .slab(ModBlocks.SOGGY_CARPET_SLAB);
 
         Identifier lampOffIdentifier = TexturedModel.CUBE.create(ModBlocks.BACKROOMS_LAMP_BLOCK, blockModelGenerators.modelOutput);
         Identifier lampOnIdentifier = blockModelGenerators.createSuffixedVariant(ModBlocks.BACKROOMS_LAMP_BLOCK, "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube);

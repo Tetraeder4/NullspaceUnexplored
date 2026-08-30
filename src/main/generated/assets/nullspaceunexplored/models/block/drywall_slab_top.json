@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "nullspaceunexplored:block/backrooms_wall_block",
+    "side": "nullspaceunexplored:block/backrooms_wall_block",
+    "top": "nullspaceunexplored:block/backrooms_wall_block"
+  }
+}

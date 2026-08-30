@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "Backrooms",
+  "group": "soggy carpet",
   "key": {
     "B": "minecraft:water_bucket",
     "W": "minecraft:yellow_wool"

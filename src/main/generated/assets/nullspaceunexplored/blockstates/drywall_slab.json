@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nullspaceunexplored:block/drywall_slab"
+    },
+    "type=double": {
+      "model": "nullspaceunexplored:block/backrooms_wall_block"
+    },
+    "type=top": {
+      "model": "nullspaceunexplored:block/drywall_slab_top"
+    }
+  }
+}

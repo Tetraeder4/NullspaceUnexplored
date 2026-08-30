@@ -8,6 +8,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.tetraeder4.nullspaceunexplored.block.ModBlocks;
 import net.tetraeder4.nullspaceunexplored.item.ModItems;
@@ -36,14 +37,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('W', Items.YELLOW_WOOL)
                         .define('B', Items.WATER_BUCKET)
                         .unlockedBy(getHasName(ModBlocks.BACKROOMS_CARPET_BLOCK), has(ModBlocks.BACKROOMS_CARPET_BLOCK))
-                        .group("Backrooms").save(output);
+                        .group("soggy carpet").save(output);
 
                 shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BACKROOMS_WALL_BLOCK, 1)
                         .pattern("DD")
                         .pattern("DD")
                         .define('D', ModItems.DRYWALL_DEBRIS)
                         .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
-                        .save(output, "drywall_from_debris");
+                        .group("drywall").save(output, "drywall_from_debris");
 
                 shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CEILING_SUPPORT,4)
                         .pattern("N N")
@@ -59,6 +60,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .requires(Items.PAPER, 1)
                         .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
                         .group("Backrooms").save(output, "drywall_from_sand_gravel_paper");
+
+                stairBuilder(ModBlocks.DRYWALL_STAIRS, Ingredient.of(ModBlocks.DRYWALL_STAIRS))
+                        .unlockedBy(getHasName(ModBlocks.BACKROOMS_WALL_BLOCK), has(ModBlocks.BACKROOMS_WALL_BLOCK))
+                        .group("drywall").save(output);
+
+                stairBuilder(ModBlocks.SOGGY_CARPET_STAIRS, Ingredient.of(ModBlocks.BACKROOMS_CARPET_BLOCK))
+                        .unlockedBy(getHasName(ModBlocks.BACKROOMS_CARPET_BLOCK), has(ModBlocks.BACKROOMS_CARPET_BLOCK))
+                        .group("soggy carpet").save(output);
+
+                slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRYWALL_SLAB, ModBlocks.BACKROOMS_WALL_BLOCK);
+                slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOGGY_CARPET_SLAB, ModBlocks.BACKROOMS_CARPET_BLOCK);
+
+                wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRYWALL_WALL, ModBlocks.BACKROOMS_WALL_BLOCK);
+
 
             }
         };

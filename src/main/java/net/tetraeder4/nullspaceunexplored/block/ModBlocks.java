@@ -1,7 +1,6 @@
 package net.tetraeder4.nullspaceunexplored.block;
 
-import net.minecraft.world.level.block.HayBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.tetraeder4.nullspaceunexplored.NullspaceUnexplored;
 import net.minecraft.core.Registry;
@@ -11,7 +10,6 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
 import net.tetraeder4.nullspaceunexplored.block.custom.CeilingPanel;
 import net.tetraeder4.nullspaceunexplored.block.custom.CeilingSupport;
@@ -36,8 +34,31 @@ public class ModBlocks {
             properties -> new CeilingSupport(properties.strength(8f).requiresCorrectToolForDrops().noOcclusion()
                             .sound(SoundType.CHAIN)));
     public static final Block REINFORCED_BRICK_BLOCK = registerBlock("reinforced_brick_block",
-            properties -> new Block(properties.strength(18f)
+            properties -> new Block(properties.strength(18f).requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE_BRICKS)));
+
+    // non full blocks
+    public static final Block DRYWALL_STAIRS = registerBlock("drywall_stairs",
+            properties -> new StairBlock(ModBlocks.BACKROOMS_WALL_BLOCK.defaultBlockState(),
+                    properties.strength(8f)
+                    .requiresCorrectToolForDrops()
+                            .sound(SoundType.CHISELED_BOOKSHELF)));
+    public static final Block DRYWALL_SLAB = registerBlock("drywall_slab",
+            properties -> new SlabBlock(properties.strength(8f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.CHISELED_BOOKSHELF)));
+    public static final Block DRYWALL_WALL = registerBlock("drywall_wall",
+            properties -> new WallBlock(properties.strength(8f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.CHISELED_BOOKSHELF)));
+    public static final Block SOGGY_CARPET_STAIRS = registerBlock("soggy_carpet_stairs",
+            properties -> new StairBlock(ModBlocks.BACKROOMS_CARPET_BLOCK.defaultBlockState(),
+                    properties.strength(2f).speedFactor(0.8f)
+                    .sound(SoundType.WET_SPONGE)));
+    public static final Block SOGGY_CARPET_SLAB = registerBlock("soggy_carpet_slab",
+            properties -> new SlabBlock(properties.strength(2f).speedFactor(0.8f)
+                    .sound(SoundType.WET_SPONGE)));
+
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {

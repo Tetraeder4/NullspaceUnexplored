@@ -1,5 +1,6 @@
 package net.tetraeder4.nullspaceunexplored.datagen;
 
+import com.sun.jna.platform.win32.Tlhelp32;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.minecraft.core.HolderLookup;
@@ -28,12 +29,21 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     @Override
     public void generate() {
         add(ModBlocks.BACKROOMS_WALL_BLOCK, createMultipleDrops(ModBlocks.BACKROOMS_WALL_BLOCK, ModItems.DRYWALL_DEBRIS, 2.0f, 4.0f));
+        add(ModBlocks.DRYWALL_STAIRS, createMultipleDrops(ModBlocks.DRYWALL_STAIRS, ModItems.DRYWALL_DEBRIS, 1.0f, 3.0f));
+        add(ModBlocks.DRYWALL_SLAB, createMultipleDrops(ModBlocks.DRYWALL_SLAB, ModItems.DRYWALL_DEBRIS, .0f, 2.0f));
+        add(ModBlocks.DRYWALL_WALL, createMultipleDrops(ModBlocks.DRYWALL_WALL, ModItems.DRYWALL_DEBRIS, 2.0f, 4.0f));
 
+        //drop self blocks
         dropSelf(ModBlocks.BACKROOMS_CARPET_BLOCK);
+        dropSelf(ModBlocks.SOGGY_CARPET_STAIRS);
         dropSelf(ModBlocks.CEILING_PANEL);
         dropSelf(ModBlocks.BACKROOMS_LAMP_BLOCK);
         dropSelf(ModBlocks.CEILING_SUPPORT);
         dropSelf(ModBlocks.REINFORCED_BRICK_BLOCK);
+
+
+        //slabs
+        add(ModBlocks.SOGGY_CARPET_SLAB, this::createSlabItemTable);
     }
 
     public LootTable.Builder createMultipleDrops(final Block block, Item item, float minDrops, float maxDrops) {

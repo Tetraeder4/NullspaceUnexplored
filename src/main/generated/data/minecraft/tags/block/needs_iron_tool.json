@@ -1,5 +1,9 @@
 {
   "values": [
-    "nullspaceunexplored:backrooms_wall_block"
+    "nullspaceunexplored:backrooms_wall_block",
+    "nullspaceunexplored:drywall_stairs",
+    "nullspaceunexplored:drywall_slab",
+    "nullspaceunexplored:drywall_wall",
+    "nullspaceunexplored:reinforced_brick_block"
   ]
 }

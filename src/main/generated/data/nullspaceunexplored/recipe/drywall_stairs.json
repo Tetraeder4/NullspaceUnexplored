@@ -3,13 +3,15 @@
   "category": "building",
   "group": "drywall",
   "key": {
-    "D": "nullspaceunexplored:drywall_debris"
+    "#": "nullspaceunexplored:drywall_stairs"
   },
   "pattern": [
-    "DD",
-    "DD"
+    "#  ",
+    "## ",
+    "###"
   ],
   "result": {
-    "id": "nullspaceunexplored:backrooms_wall_block"
+    "count": 4,
+    "id": "nullspaceunexplored:drywall_stairs"
   }
 }

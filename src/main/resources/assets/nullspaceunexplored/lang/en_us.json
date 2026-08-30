@@ -1,7 +1,12 @@
 {
   "item.nullspaceunexplored.drywall_debris": "Drywall Debris",
   "block.nullspaceunexplored.backrooms_wall_block": "Drywall Block",
+  "block.nullspaceunexplored.drywall_slab": "Drywall Slab",
+  "block.nullspaceunexplored.drywall_stairs": "Drywall Stairs",
+  "block.nullspaceunexplored.drywall_wall": "Drywall Wall",
   "block.nullspaceunexplored.backrooms_carpet_block": "Soggy Carpet Block",
+  "block.nullspaceunexplored.soggy_carpet_stairs": "Soggy Carpet Stairs",
+  "block.nullspaceunexplored.soggy_carpet_slab": "Soggy Carpet Slab",
   "creativemodetab.nullspaceunexplored.backrooms_blocks": "Backroom Blocks",
   "creativemodetab.nullspaceunexplored.backrooms_items": "Backroom Items",
   "block.nullspaceunexplored.ceiling_panel": "Ceiling Panel",

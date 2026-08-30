@@ -30,11 +30,16 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.nullspaceunexplored.backrooms_blocks"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.BACKROOMS_WALL_BLOCK);
+                        output.accept(ModBlocks.DRYWALL_STAIRS);
+                        output.accept(ModBlocks.DRYWALL_SLAB);
+                        output.accept(ModBlocks.DRYWALL_WALL);
                         output.accept(ModBlocks.BACKROOMS_CARPET_BLOCK);
+                        output.accept(ModBlocks.SOGGY_CARPET_STAIRS);
+                        output.accept(ModBlocks.SOGGY_CARPET_SLAB);
                         output.accept(ModBlocks.REINFORCED_BRICK_BLOCK);
                         output.accept(ModBlocks.BACKROOMS_LAMP_BLOCK);
-                        output.accept(ModBlocks.CEILING_PANEL);
                         output.accept(ModBlocks.CEILING_SUPPORT);
+                        output.accept(ModBlocks.CEILING_PANEL);
                     }).build());
 
 
