@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.BACKROOMS_WALL_BLOCK);
                         output.accept(ModBlocks.BACKROOMS_CARPET_BLOCK);
+                        output.accept(ModBlocks.REINFORCED_BRICK_BLOCK);
                         output.accept(ModBlocks.BACKROOMS_LAMP_BLOCK);
                         output.accept(ModBlocks.CEILING_PANEL);
                         output.accept(ModBlocks.CEILING_SUPPORT);

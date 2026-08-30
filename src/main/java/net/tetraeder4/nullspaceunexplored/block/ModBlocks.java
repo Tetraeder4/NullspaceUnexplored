@@ -35,6 +35,9 @@ public class ModBlocks {
     public static final Block CEILING_SUPPORT = registerBlock("ceiling_support",
             properties -> new CeilingSupport(properties.strength(8f).requiresCorrectToolForDrops().noOcclusion()
                             .sound(SoundType.CHAIN)));
+    public static final Block REINFORCED_BRICK_BLOCK = registerBlock("reinforced_brick_block",
+            properties -> new Block(properties.strength(14f)
+                    .sound(SoundType.DEEPSLATE_BRICKS)));
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
