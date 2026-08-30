@@ -29,7 +29,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 oreSmelting(List.of(ModBlocks.BACKROOMS_CARPET_BLOCK), RecipeCategory.MISC, CookingBookCategory.BLOCKS, Items.YELLOW_WOOL, 0.1f, 200, "Backrooms");
                 //just fyi: nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.DRYWALL_DEBRIS, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BACKROOMS_WALL_BLOCK);
 
-                shaped(RecipeCategory.MISC, ModBlocks.BACKROOMS_CARPET_BLOCK, 8)
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BACKROOMS_CARPET_BLOCK, 8)
                         .pattern("WWW")
                         .pattern("WBW")
                         .pattern("WWW")
@@ -38,12 +38,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModBlocks.BACKROOMS_CARPET_BLOCK), has(ModBlocks.BACKROOMS_CARPET_BLOCK))
                         .group("Backrooms").save(output);
 
-                shaped(RecipeCategory.MISC, ModBlocks.BACKROOMS_WALL_BLOCK, 1)
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BACKROOMS_WALL_BLOCK, 1)
                         .pattern("DD")
                         .pattern("DD")
                         .define('D', ModItems.DRYWALL_DEBRIS)
                         .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
-                        .group("Backrooms").save(output, "drywall_from_debris");
+                        .save(output, "drywall_from_debris");
+
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CEILING_SUPPORT,4)
+                        .pattern("N N")
+                        .pattern("BBB")
+                        .define('N', Items.IRON_NUGGET)
+                        .define('B', Items.IRON_INGOT)
+                        .unlockedBy(getHasName(ModBlocks.CEILING_SUPPORT), has(ModBlocks.CEILING_SUPPORT))
+                        .save(output);
 
                 shapeless(RecipeCategory.MISC, ModBlocks.BACKROOMS_WALL_BLOCK, 8)
                         .requires(Items.SAND, 4)

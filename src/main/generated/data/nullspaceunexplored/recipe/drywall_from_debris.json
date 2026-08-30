@@ -1,7 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "Backrooms",
+  "category": "building",
   "key": {
     "D": "nullspaceunexplored:drywall_debris"
   },
