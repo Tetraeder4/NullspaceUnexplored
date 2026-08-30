@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "nullspaceunexplored:block/iron_grate",
+    "side": "nullspaceunexplored:block/iron_grate",
+    "top": "nullspaceunexplored:block/iron_grate"
+  }
+}

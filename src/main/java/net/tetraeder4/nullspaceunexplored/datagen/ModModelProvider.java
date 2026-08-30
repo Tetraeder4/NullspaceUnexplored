@@ -26,7 +26,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.REINFORCED_BRICK_BLOCK);
-        blockModelGenerators.createTrivialCube(ModBlocks.IRON_GRATE);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_PANEL);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_SUPPORT);
 
@@ -38,6 +37,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.family(ModBlocks.BACKROOMS_CARPET_BLOCK)
                 .stairs(ModBlocks.SOGGY_CARPET_STAIRS)
                 .slab(ModBlocks.SOGGY_CARPET_SLAB);
+
+        blockModelGenerators.family(ModBlocks.IRON_GRATE)
+                .stairs(ModBlocks.IRON_GRATE_STAIRS)
+                .slab(ModBlocks.IRON_GRATE_SLAB);
 
         Identifier lampOffIdentifier = TexturedModel.CUBE.create(ModBlocks.BACKROOMS_LAMP_BLOCK, blockModelGenerators.modelOutput);
         Identifier lampOnIdentifier = blockModelGenerators.createSuffixedVariant(ModBlocks.BACKROOMS_LAMP_BLOCK, "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube);

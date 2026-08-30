@@ -3,15 +3,15 @@
   "category": "building",
   "group": "iron grate",
   "key": {
-    "W": "minecraft:iron_block"
+    "#": "nullspaceunexplored:iron_grate"
   },
   "pattern": [
-    " W ",
-    "W W",
-    " W "
+    "#  ",
+    "## ",
+    "###"
   ],
   "result": {
     "count": 4,
-    "id": "nullspaceunexplored:iron_grate"
+    "id": "nullspaceunexplored:iron_grate_stairs"
   }
 }

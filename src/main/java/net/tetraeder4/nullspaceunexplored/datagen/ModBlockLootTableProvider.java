@@ -34,10 +34,12 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.CEILING_SUPPORT);
         dropSelf(ModBlocks.REINFORCED_BRICK_BLOCK);
         dropSelf(ModBlocks.IRON_GRATE);
+        dropSelf(ModBlocks.IRON_GRATE_STAIRS);
 
 
         //slabs
         add(ModBlocks.SOGGY_CARPET_SLAB, this::createSlabItemTable);
+        add(ModBlocks.IRON_GRATE_SLAB, this::createSlabItemTable);
     }
 
     public LootTable.Builder createMultipleDrops(final Block block, Item item, float minDrops, float maxDrops) {

@@ -38,6 +38,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SOGGY_CARPET_SLAB);
                         output.accept(ModBlocks.REINFORCED_BRICK_BLOCK);
                         output.accept(ModBlocks.IRON_GRATE);
+                        output.accept(ModBlocks.IRON_GRATE_STAIRS);
+                        output.accept(ModBlocks.IRON_GRATE_SLAB);
                         output.accept(ModBlocks.BACKROOMS_LAMP_BLOCK);
                         output.accept(ModBlocks.CEILING_SUPPORT);
                         output.accept(ModBlocks.CEILING_PANEL);

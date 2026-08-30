@@ -61,6 +61,12 @@ public class ModBlocks {
     public static final Block SOGGY_CARPET_SLAB = registerBlock("soggy_carpet_slab",
             properties -> new SlabBlock(properties.strength(2f).speedFactor(0.8f)
                     .sound(SoundType.WET_SPONGE)));
+    public static final Block IRON_GRATE_STAIRS = registerBlock("iron_grate_stairs",
+            properties -> new StairBlock(ModBlocks.IRON_GRATE.defaultBlockState(), properties.requiresCorrectToolForDrops().noOcclusion()
+                    .strength(8f).sound(SoundType.COPPER_GRATE)));
+    public static final Block IRON_GRATE_SLAB = registerBlock("iron_grate_slab",
+            properties -> new SlabBlock(properties.requiresCorrectToolForDrops().noOcclusion()
+                    .strength(8f).sound(SoundType.COPPER_GRATE)));
 
 
 

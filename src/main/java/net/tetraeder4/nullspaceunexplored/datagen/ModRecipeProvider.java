@@ -46,7 +46,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern(" W ")
                         .define('W', Items.IRON_BLOCK)
                         .unlockedBy(getHasName(ModBlocks.IRON_GRATE), has(ModBlocks.IRON_GRATE))
-                        .save(output);
+                        .group("iron grate").save(output);
 
                 shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CEILING_SUPPORT,4)
                         .pattern("N N")
@@ -71,6 +71,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModBlocks.BACKROOMS_CARPET_BLOCK), has(ModBlocks.BACKROOMS_CARPET_BLOCK))
                         .group("soggy carpet").save(output);
 
+                stairBuilder(ModBlocks.IRON_GRATE_STAIRS, Ingredient.of(ModBlocks.IRON_GRATE))
+                        .unlockedBy(getHasName(ModBlocks.IRON_GRATE), has(ModBlocks.IRON_GRATE))
+                        .group("iron grate").save(output);
+
                 bricksBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.REINFORCED_BRICK_BLOCK, Ingredient.of(ModItems.REINFORCED_BRICK))
                         .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
                         .group("drywall").save(output, "drywall_from_debris");
@@ -81,6 +85,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRYWALL_SLAB, ModBlocks.BACKROOMS_WALL_BLOCK);
                 slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOGGY_CARPET_SLAB, ModBlocks.BACKROOMS_CARPET_BLOCK);
+                slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_GRATE_SLAB, ModBlocks.IRON_GRATE_SLAB);
 
                 wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRYWALL_WALL, ModBlocks.BACKROOMS_WALL_BLOCK);
             }
