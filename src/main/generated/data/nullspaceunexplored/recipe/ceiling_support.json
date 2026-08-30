@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": "minecraft:iron_ingot",
+    "N": "minecraft:iron_nugget"
+  },
+  "pattern": [
+    "N N",
+    "BBB"
+  ],
+  "result": {
+    "count": 4,
+    "id": "nullspaceunexplored:ceiling_support"
+  }
+}
