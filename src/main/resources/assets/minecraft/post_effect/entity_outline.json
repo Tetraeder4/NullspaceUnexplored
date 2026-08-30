@@ -4,10 +4,12 @@
         "blur_horizontal": {},
         "blur_vertical": {},
         "chromatic_abboration": {},
-        "bloom_composite": {}
+        "bloom_composite": {},
+        "posterisation": {}
     },
 
     "passes": [
+
         {
             "vertex_shader": "minecraft:core/screenquad",
             "fragment_shader": "minecraft:post/bloom_extract",
@@ -212,7 +214,7 @@
                     {
                         "name": "Intensity",
                         "type": "float",
-                        "value": 0.008
+                        "value": 0.002
                     }
                 ]
             }
@@ -227,16 +229,29 @@
                     "bilinear": true
                 }
             ],
-            "output": "minecraft:main",
+            "output": "posterisation",
             "uniforms": {
                 "PosterisationConfig": [
                     {
                         "name": "colorSteps",
                         "type": "vec3",
-                        "value": [ 64.0, 64.0, 64.0 ]
+                        "value": [ 128.0, 128.0, 128.0 ]
                     }
                 ]
             }
+        },
+        {
+            "vertex_shader": "minecraft:core/screenquad",
+            "fragment_shader": "minecraft:post/vhs_effect",
+            "inputs": [
+                {
+                    "sampler_name": "In",
+                    "target": "posterisation",
+                    "bilinear": true
+                }
+            ],
+            "output": "minecraft:main",
+            "uniforms": {}
         }
     ]
 }
