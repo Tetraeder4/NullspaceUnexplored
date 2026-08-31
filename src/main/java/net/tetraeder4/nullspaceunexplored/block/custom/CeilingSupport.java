@@ -54,12 +54,13 @@ public class CeilingSupport extends Block {
 
     private static final VoxelShape CEILING_PANEL_SHAPE = Shapes.or(
             NORMAL_SHAPE,
-            Block.box(2,0,2,14,1,14)
+            Block.box(2, 0, 2, 14, 1, 14)
     );
+
     private static final VoxelShape LIGHT_PANEL_SHAPE = Shapes.or(
             NORMAL_SHAPE,
-            Block.box(2,0,2,14,2,14)
-        );
+            Block.box(2, 0, 2, 14, 2, 14)
+    );
 
     public CeilingSupport(Properties properties) {
         super(properties);
@@ -100,11 +101,16 @@ public class CeilingSupport extends Block {
             InteractionHand hand,
             BlockHitResult hit
     ) {
-        Type type;
-        if (stack.is(ModItems.REINFORCED_BRICK)){
-            type = Type.CEILING_PANEL;
+        if (state.getValue(TYPE) != Type.NORMAL) {
+            return InteractionResult.PASS;
+        }
+
+        Type newType;
+
+        if (stack.is(ModItems.REINFORCED_BRICK)) {
+            newType = Type.CEILING_PANEL;
         } else if (stack.is(ModItems.DRYWALL_DEBRIS)) {
-            type = Type.LIGHT_PANEL;
+            newType = Type.LIGHT_PANEL;
         } else {
             return InteractionResult.PASS;
         }
@@ -112,7 +118,7 @@ public class CeilingSupport extends Block {
         if (!level.isClientSide()) {
             level.setBlock(
                     pos,
-                    state.setValue(TYPE, type),
+                    state.setValue(TYPE, newType),
                     Block.UPDATE_ALL
             );
 
