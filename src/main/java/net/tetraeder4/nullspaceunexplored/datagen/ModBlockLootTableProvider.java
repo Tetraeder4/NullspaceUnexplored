@@ -30,7 +30,6 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.BACKROOMS_CARPET_BLOCK);
         dropSelf(ModBlocks.SOGGY_CARPET_STAIRS);
         dropSelf(ModBlocks.BACKROOMS_LAMP_BLOCK);
-        dropSelf(ModBlocks.CEILING_SUPPORT);
         dropSelf(ModBlocks.REINFORCED_BRICK_BLOCK);
         dropSelf(ModBlocks.IRON_GRATE);
 
