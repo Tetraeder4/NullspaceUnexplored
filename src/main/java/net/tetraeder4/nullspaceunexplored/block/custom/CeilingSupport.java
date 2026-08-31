@@ -120,7 +120,6 @@ public class CeilingSupport extends Block {
             BlockHitResult hit
     ) {
         Type type;
-
         if (stack.is(ModItems.REINFORCED_BRICK)){
             type = Type.CEILING_PANEL;
         } else if (stack.is(ModItems.DRYWALL_DEBRIS)) {
