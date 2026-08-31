@@ -53,13 +53,32 @@ public class CeilingSupport extends Block {
             Block.box(14, 0, 2, 16, 2, 14)
     );
 
-    // Stock
-    private static final VoxelShape CEILING_PANEL_SHAPE =
-            Block.box(0, 0, 0, 16, 8, 16);
+    private static final VoxelShape CEILING_PANEL_SHAPE = Shapes.or(
+            Block.box(0, 2, 0, 1, 16, 1),
+            Block.box(15, 2, 0, 16, 16, 1),
+            Block.box(15, 2, 15, 16, 16, 16),
+            Block.box(0, 2, 15, 1, 16, 16),
 
-    // Kartoffel
-    private static final VoxelShape LIGHT_PANEL_SHAPE =
-            Block.box(2, 0, 2, 14, 12, 14);
+            Block.box(0, 0, 0, 16, 2, 2),
+            Block.box(0, 0, 14, 16, 2, 16),
+            Block.box(0, 0, 2, 2, 2, 14),
+            Block.box(14, 0, 2, 16, 2, 14),
+
+            Block.box(2,0,2,14,1,14)
+    );
+    private static final VoxelShape LIGHT_PANEL_SHAPE = Shapes.or(
+            Block.box(0, 2, 0, 1, 16, 1),
+            Block.box(15, 2, 0, 16, 16, 1),
+            Block.box(15, 2, 15, 16, 16, 16),
+            Block.box(0, 2, 15, 1, 16, 16),
+
+            Block.box(0, 0, 0, 16, 2, 2),
+            Block.box(0, 0, 14, 16, 2, 16),
+            Block.box(0, 0, 2, 2, 2, 14),
+            Block.box(14, 0, 2, 16, 2, 14),
+
+            Block.box(2,0,2,14,2,14)
+        );
 
     public CeilingSupport(Properties properties) {
         super(properties);
