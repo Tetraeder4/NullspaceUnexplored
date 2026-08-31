@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.DRYWALL_DEBRIS);
                         output.accept(ModItems.REINFORCED_BRICK);
+                        output.accept(ModItems.LIGHT_PANEL);
                     }).build());
 
 
@@ -40,7 +41,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.IRON_GRATE);
                         output.accept(ModBlocks.BACKROOMS_LAMP_BLOCK);
                         output.accept(ModBlocks.CEILING_SUPPORT);
-                        output.accept(ModBlocks.CEILING_PANEL);
                     }).build());
 
 
