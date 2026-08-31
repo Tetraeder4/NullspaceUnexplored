@@ -11,7 +11,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
-import net.tetraeder4.nullspaceunexplored.block.custom.CeilingPanel;
 import net.tetraeder4.nullspaceunexplored.block.custom.CeilingSupport;
 
 import java.util.function.Function;
@@ -27,9 +26,6 @@ public class ModBlocks {
     public static final Block BACKROOMS_LAMP_BLOCK = registerBlock("backrooms_lamp_block",
             properties -> new BackroomsLampBlock(properties.strength(3f)
                     .requiresCorrectToolForDrops().lightLevel(state -> state.getValue(BackroomsLampBlock.CLICKED) ? 15 : 0)));
-    public static final Block CEILING_PANEL = registerBlock("ceiling_panel",
-                   properties -> new CeilingPanel(properties.strength(2f)
-                           .sound(SoundType.WOOL)));
     public static final Block CEILING_SUPPORT = registerBlock("ceiling_support",
             properties -> new CeilingSupport(properties.strength(8f).requiresCorrectToolForDrops().noOcclusion()
                             .sound(SoundType.CHAIN)));
