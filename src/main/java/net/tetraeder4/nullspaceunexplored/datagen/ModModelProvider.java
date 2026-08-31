@@ -16,7 +16,6 @@ import net.tetraeder4.nullspaceunexplored.block.ModBlocks;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
 import net.tetraeder4.nullspaceunexplored.item.ModItems;
 
-import java.rmi.MarshalledObject;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricPackOutput output) {
@@ -27,8 +26,6 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.REINFORCED_BRICK_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.IRON_GRATE);
-        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_PANEL);
-        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_SUPPORT);
 
         blockModelGenerators.family(ModBlocks.BACKROOMS_WALL_BLOCK)
                 .stairs(ModBlocks.DRYWALL_STAIRS)
