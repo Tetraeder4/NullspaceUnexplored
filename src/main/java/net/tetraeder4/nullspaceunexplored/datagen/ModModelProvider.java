@@ -52,5 +52,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.DRYWALL_DEBRIS, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.REINFORCED_BRICK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.LIGHT_PANEL, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.CARDBOARD, ModelTemplates.FLAT_ITEM);
     }
 }

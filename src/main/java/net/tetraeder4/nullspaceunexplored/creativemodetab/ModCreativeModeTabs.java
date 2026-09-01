@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DRYWALL_DEBRIS);
                         output.accept(ModItems.REINFORCED_BRICK);
                         output.accept(ModItems.LIGHT_PANEL);
+                        output.accept(ModItems.CARDBOARD);
                     }).build());
 
 
