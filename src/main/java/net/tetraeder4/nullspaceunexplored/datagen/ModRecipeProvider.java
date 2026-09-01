@@ -63,6 +63,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
                         .group("Backrooms").save(output, "drywall_from_sand_gravel_paper");
 
+                shapeless(RecipeCategory.MISC, ModItems.CARDBOARD, 4)
+                        .requires(ModBlocks.CARDBOARD_BLOCK)
+                        .unlockedBy(getHasName(ModBlocks.CARDBOARD_BLOCK), has(ModBlocks.CARDBOARD_BLOCK))
+                        .group("cardboard").save(output);
+
                 stairBuilder(ModBlocks.DRYWALL_STAIRS, Ingredient.of(ModBlocks.DRYWALL_STAIRS))
                         .unlockedBy(getHasName(ModBlocks.BACKROOMS_WALL_BLOCK), has(ModBlocks.BACKROOMS_WALL_BLOCK))
                         .group("drywall").save(output);
@@ -71,9 +76,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModBlocks.BACKROOMS_CARPET_BLOCK), has(ModBlocks.BACKROOMS_CARPET_BLOCK))
                         .group("soggy carpet").save(output);
 
+                stairBuilder(ModBlocks.CARDBOARD_STAIRS, Ingredient.of(ModBlocks.CARDBOARD_BLOCK))
+                        .unlockedBy(getHasName(ModBlocks.CARDBOARD_BLOCK), has(ModBlocks.CARDBOARD_BLOCK))
+                        .group("cardboard").save(output);
+
                 bricksBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.REINFORCED_BRICK_BLOCK, Ingredient.of(ModItems.REINFORCED_BRICK))
                         .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
                         .group("drywall").save(output, "drywall_from_debris");
+
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARDBOARD_BLOCK,1)
+                        .pattern("CC")
+                        .pattern("CC")
+                        .define('C', ModItems.CARDBOARD)
+                        .unlockedBy(getHasName(ModItems.CARDBOARD), has(ModItems.CARDBOARD))
+                        .group("cardboard").save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.CARDBOARD, 1)
+                        .pattern("PP")
+                        .define('P', Items.PAPER)
+                        .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
+                        .group("cardboard").save(output, "cardboard_from_paper");
 
                 bricksBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BACKROOMS_WALL_BLOCK, Ingredient.of(ModItems.DRYWALL_DEBRIS))
                         .unlockedBy(getHasName(ModItems.DRYWALL_DEBRIS), has(ModItems.DRYWALL_DEBRIS))
@@ -81,6 +103,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRYWALL_SLAB, ModBlocks.BACKROOMS_WALL_BLOCK);
                 slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOGGY_CARPET_SLAB, ModBlocks.BACKROOMS_CARPET_BLOCK);
+                slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARDBOARD_SLAB, ModBlocks.CARDBOARD_BLOCK);
 
                 wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRYWALL_WALL, ModBlocks.BACKROOMS_WALL_BLOCK);
             }

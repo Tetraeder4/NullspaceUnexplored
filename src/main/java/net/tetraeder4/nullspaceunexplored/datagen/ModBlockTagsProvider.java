@@ -29,6 +29,11 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.SOGGY_CARPET_STAIRS)
                 .add(ModBlocks.SOGGY_CARPET_SLAB);
 
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.CARDBOARD_BLOCK)
+                .add(ModBlocks.CARDBOARD_STAIRS)
+                .add(ModBlocks.CARDBOARD_SLAB);
+
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.BACKROOMS_WALL_BLOCK)
                 .add(ModBlocks.DRYWALL_STAIRS)
@@ -39,11 +44,13 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
         valueLookupBuilder(BlockTags.STAIRS)
                 .add(ModBlocks.DRYWALL_STAIRS)
-                .add(ModBlocks.SOGGY_CARPET_STAIRS);
+                .add(ModBlocks.SOGGY_CARPET_STAIRS)
+                .add(ModBlocks.CARDBOARD_STAIRS);
 
         valueLookupBuilder(BlockTags.SLABS)
                 .add(ModBlocks.DRYWALL_SLAB)
-                .add(ModBlocks.SOGGY_CARPET_SLAB);
+                .add(ModBlocks.SOGGY_CARPET_SLAB)
+                .add(ModBlocks.CARDBOARD_SLAB);
 
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.DRYWALL_WALL);

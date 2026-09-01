@@ -16,5 +16,8 @@
   "block.nullspaceunexplored.ceiling_panel": "Ceiling Panel",
   "block.nullspaceunexplored.ceiling_support": "Ceiling Support",
   "block.nullspaceunexplored.reinforced_brick_block": "Reinforced Bricks",
-  "block.nullspaceunexplored.iron_grate": "Iron Grate"
+  "block.nullspaceunexplored.iron_grate": "Iron Grate",
+  "block.nullspaceunexplored.cardboard_block": "Cardboard Block",
+  "block.nullspaceunexplored.cardboard_stairs": "Cardboard Stairs",
+  "block.nullspaceunexplored.cardboard_slab": "Cardboard Slab"
 }

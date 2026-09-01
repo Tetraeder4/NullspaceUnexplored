@@ -38,6 +38,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BACKROOMS_CARPET_BLOCK);
                         output.accept(ModBlocks.SOGGY_CARPET_STAIRS);
                         output.accept(ModBlocks.SOGGY_CARPET_SLAB);
+                        output.accept(ModBlocks.CARDBOARD_BLOCK);
+                        output.accept(ModBlocks.CARDBOARD_STAIRS);
+                        output.accept(ModBlocks.CARDBOARD_SLAB);
                         output.accept(ModBlocks.REINFORCED_BRICK_BLOCK);
                         output.accept(ModBlocks.IRON_GRATE);
                         output.accept(ModBlocks.BACKROOMS_LAMP_BLOCK);

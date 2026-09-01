@@ -1,7 +1,8 @@
 // 26.1.2	-999999999-01-01T00:00:00	Nullspace Unexplored/Tags for minecraft:block
+9a11ee47710b93a6ea46491d3c251e7f8584a455 data/minecraft/tags/block/mineable/axe.json
 5cdb2c22ad197956191edd321242a711d8c4a530 data/minecraft/tags/block/mineable/hoe.json
 4db90c60c8accf2b059c42adccc5bd427fd90ec1 data/minecraft/tags/block/mineable/pickaxe.json
 4fc74c67f4d453777fa8f573f514adeb06b90ebb data/minecraft/tags/block/needs_iron_tool.json
-18fb8546018e06340adabc8b171c9f792e19ff86 data/minecraft/tags/block/slabs.json
-2af66928cbf78ec40f85602d12496f6d97202981 data/minecraft/tags/block/stairs.json
+9f3959e66064b87e916026e122853cba6be1934e data/minecraft/tags/block/slabs.json
+e4af69bd4c927683881e6885540c8f22cddc7d85 data/minecraft/tags/block/stairs.json
 0563eefe610e76661862015ec77f2872909fc6aa data/minecraft/tags/block/walls.json

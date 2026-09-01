@@ -29,6 +29,8 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         //drop self blocks
         dropSelf(ModBlocks.BACKROOMS_CARPET_BLOCK);
         dropSelf(ModBlocks.SOGGY_CARPET_STAIRS);
+        dropSelf(ModBlocks.CARDBOARD_BLOCK);
+        dropSelf(ModBlocks.CARDBOARD_STAIRS);
         dropSelf(ModBlocks.BACKROOMS_LAMP_BLOCK);
         dropSelf(ModBlocks.REINFORCED_BRICK_BLOCK);
         dropSelf(ModBlocks.IRON_GRATE);
@@ -36,6 +38,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         //slabs
         add(ModBlocks.SOGGY_CARPET_SLAB, this::createSlabItemTable);
+        add(ModBlocks.CARDBOARD_SLAB, this::createSlabItemTable);
     }
 
     public LootTable.Builder createMultipleDrops(final Block block, Item item, float minDrops, float maxDrops) {
