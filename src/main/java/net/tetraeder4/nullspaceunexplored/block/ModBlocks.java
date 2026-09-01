@@ -28,6 +28,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops().lightLevel(state -> state.getValue(BackroomsLampBlock.CLICKED) ? 15 : 0)));
     public static final Block CEILING_SUPPORT = registerBlock("ceiling_support",
             properties -> new CeilingSupport(properties.strength(8f).requiresCorrectToolForDrops().noOcclusion()
+                    .lightLevel(state -> (state.getValue(CeilingSupport.TYPE) == CeilingSupport.Type.LIGHT_PANEL) ? 15 : 0)
                             .sound(SoundType.CHAIN)));
     public static final Block REINFORCED_BRICK_BLOCK = registerBlock("reinforced_brick_block",
             properties -> new Block(properties.strength(18f).requiresCorrectToolForDrops()
