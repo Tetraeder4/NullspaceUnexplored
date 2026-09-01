@@ -27,6 +27,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.REINFORCED_BRICK_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.IRON_GRATE);
 
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_SUPPORT);
+
         blockModelGenerators.family(ModBlocks.BACKROOMS_WALL_BLOCK)
                 .stairs(ModBlocks.DRYWALL_STAIRS)
                 .slab(ModBlocks.DRYWALL_SLAB)
