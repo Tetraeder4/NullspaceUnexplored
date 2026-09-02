@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.REINFORCED_BRICK);
                         output.accept(ModItems.LIGHT_PANEL);
                         output.accept(ModItems.CARDBOARD);
+                        output.accept(ModItems.CEILING_PANEL);
                     }).build());
 
 

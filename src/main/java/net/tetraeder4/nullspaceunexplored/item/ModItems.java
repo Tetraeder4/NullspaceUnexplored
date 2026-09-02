@@ -17,6 +17,7 @@ public class ModItems {
     public static final Item REINFORCED_BRICK = registerItem("reinforced_brick", Item::new);
     public static final Item LIGHT_PANEL =registerItem("light_panel", Item::new);
     public static final Item CARDBOARD =registerItem("cardboard", Item::new);
+    public static final Item CEILING_PANEL = registerItem("ceiling_panel", Item::new);
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name)))));

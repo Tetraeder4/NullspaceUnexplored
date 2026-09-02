@@ -109,7 +109,7 @@ public class CeilingSupport extends Block {
         Type newType;
 
         // Reinforced Brick -> Ceiling Panel
-        if (stack.is(ModItems.REINFORCED_BRICK)) {
+        if (stack.is(ModItems.CEILING_PANEL)) {
             newType = Type.CEILING_PANEL;
 
             // Drywall Debris -> Light Panel

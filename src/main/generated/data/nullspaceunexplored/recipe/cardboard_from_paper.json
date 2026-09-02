@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "cardboard",
+  "key": {
+    "P": "minecraft:paper"
+  },
+  "pattern": [
+    "PP"
+  ],
+  "result": {
+    "id": "nullspaceunexplored:cardboard"
+  }
+}
