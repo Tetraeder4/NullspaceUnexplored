@@ -95,8 +95,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.REINFORCED_BRICK_BLOCK);
-        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.CEILING_SUPPORT);
-        blockModelGenerators.createTrivialCube(ModBlocks.IRON_GRATE);
 
         createCustomCube(
                 blockModelGenerators,
