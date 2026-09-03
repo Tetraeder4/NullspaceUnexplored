@@ -16,7 +16,7 @@ import net.tetraeder4.nullspaceunexplored.block.custom.CeilingSupport;
 import java.util.function.Function;
 
 public class ModBlocks {
-    //List Block + creative inventory + generate model + itemmodel + texture + lang file + block tag + recipe + loottable
+    //List Block + creative inventory + generate model + itemmodel + texture + a file + block tag + recipe + loottable
     public static final Block BACKROOMS_WALL_BLOCK = registerBlock("backrooms_wall_block",
             properties -> new Block(properties.strength(8f)
                     .requiresCorrectToolForDrops().sound(SoundType.CHISELED_BOOKSHELF)));
@@ -37,7 +37,7 @@ public class ModBlocks {
             properties -> new Block(properties.requiresCorrectToolForDrops().noOcclusion()
                     .strength(8f).sound(SoundType.COPPER_GRATE)));
     public static final Block CARDBOARD_BLOCK = registerBlock("cardboard_block",
-            properties -> new Block(properties
+            properties -> new Block(properties.ignitedByLava()
                     .strength(0.5f).sound(SoundType.SHELF)));
 
     // non full blocks

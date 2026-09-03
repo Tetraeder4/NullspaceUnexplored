@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "nullspaceunexplored:block/cardboard_block_top",
+    "east": "nullspaceunexplored:block/cardboard_block_side",
+    "north": "nullspaceunexplored:block/cardboard_block_front",
+    "particle": "nullspaceunexplored:block/cardboard_block_top",
+    "south": "nullspaceunexplored:block/cardboard_block_front",
+    "up": "nullspaceunexplored:block/cardboard_block_top",
+    "west": "nullspaceunexplored:block/cardboard_block_side"
+  }
+}

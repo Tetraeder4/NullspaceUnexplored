@@ -2,6 +2,7 @@ package net.tetraeder4.nullspaceunexplored;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.resources.Identifier;
 
 import net.tetraeder4.nullspaceunexplored.block.ModBlocks;
@@ -19,6 +20,8 @@ public class NullspaceUnexplored implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModCreativeModeTabs.registerModCreativeModeTabs();
+
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CARDBOARD_BLOCK, 100, 20);
 	}
 
 	public static Identifier id(String path) {
