@@ -6,15 +6,16 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
-import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.data.models.model.TextureMapping;
-import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.client.data.models.model.*;
 import net.minecraft.client.renderer.block.dispatch.Variant;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.random.WeightedList;
+import net.minecraft.world.level.block.Block;
 import net.tetraeder4.nullspaceunexplored.block.ModBlocks;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
 import net.tetraeder4.nullspaceunexplored.item.ModItems;
+
 
 
 public class ModModelProvider extends FabricModelProvider {
@@ -22,10 +23,58 @@ public class ModModelProvider extends FabricModelProvider {
         super(output);
     }
 
+    private static void createCustomCube(
+            BlockModelGenerators generators,
+            Block block,
+            Identifier top,
+            Identifier bottom,
+            Identifier north,
+            Identifier south,
+            Identifier east,
+            Identifier west
+    ) {
+        TextureMapping mapping = new TextureMapping()
+                .put(TextureSlot.UP, new Material(top, false))
+                .put(TextureSlot.DOWN, new Material(bottom, false))
+                .put(TextureSlot.NORTH, new Material(north, false))
+                .put(TextureSlot.SOUTH, new Material(south, false))
+                .put(TextureSlot.EAST, new Material(east, false))
+                .put(TextureSlot.WEST, new Material(west, false))
+                .put(TextureSlot.PARTICLE, new Material(top, false));
+
+        Identifier model = ModelTemplates.CUBE.create(
+                block,
+                mapping,
+                generators.modelOutput
+        );
+
+        generators.blockStateOutput.accept(
+                MultiVariantGenerator.dispatch(
+                        block,
+                        new MultiVariant(
+                                WeightedList.<Variant>builder()
+                                        .add(new Variant(model))
+                                        .build()
+                        )
+                )
+        );
+    }
+
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.REINFORCED_BRICK_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.IRON_GRATE);
+
+        createCustomCube(
+                blockModelGenerators,
+                ModBlocks.CARDBOARD_BLOCK,
+                Identifier.fromNamespaceAndPath("nullspaceunexplored", "block/cardboard_block_top"),
+                Identifier.fromNamespaceAndPath("nullspaceunexplored", "block/cardboard_block_top"),
+                Identifier.fromNamespaceAndPath("nullspaceunexplored", "block/cardboard_block_front"),
+                Identifier.fromNamespaceAndPath("nullspaceunexplored", "block/cardboard_block_front"),
+                Identifier.fromNamespaceAndPath("nullspaceunexplored", "block/cardboard_block_side"),
+                Identifier.fromNamespaceAndPath("nullspaceunexplored", "block/cardboard_block_side")
+        );
 
         blockModelGenerators.family(ModBlocks.BACKROOMS_WALL_BLOCK)
                 .stairs(ModBlocks.DRYWALL_STAIRS)

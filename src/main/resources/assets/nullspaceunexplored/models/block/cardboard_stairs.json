@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "nullspaceunexplored:block/cardboard_block",
-    "side": "nullspaceunexplored:block/cardboard_block",
-    "top": "nullspaceunexplored:block/cardboard_block"
-  }
-}
