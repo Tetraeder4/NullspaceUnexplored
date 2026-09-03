@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.tetraeder4.nullspaceunexplored.block.ModBlocks;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -14,7 +15,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider registries) {
+    protected void addTags(HolderLookup.@NotNull Provider registries) {
         valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.BACKROOMS_WALL_BLOCK)
                 .add(ModBlocks.DRYWALL_STAIRS)
@@ -28,8 +29,12 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(BlockTags.MINEABLE_WITH_HOE)
                 .add(ModBlocks.BACKROOMS_CARPET_BLOCK)
                 .add(ModBlocks.SOGGY_CARPET_STAIRS)
-                .add(ModBlocks.SOGGY_CARPET_SLAB)
-                .add(ModBlocks.CEILING_PANEL);
+                .add(ModBlocks.SOGGY_CARPET_SLAB);
+
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.CARDBOARD_BLOCK)
+                .add(ModBlocks.CARDBOARD_STAIRS)
+                .add(ModBlocks.CARDBOARD_SLAB);
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.BACKROOMS_WALL_BLOCK)
@@ -44,11 +49,13 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(BlockTags.STAIRS)
                 .add(ModBlocks.DRYWALL_STAIRS)
                 .add(ModBlocks.SOGGY_CARPET_STAIRS)
+                .add(ModBlocks.CARDBOARD_STAIRS)
                 .add(ModBlocks.IRON_GRATE_STAIRS);
 
         valueLookupBuilder(BlockTags.SLABS)
                 .add(ModBlocks.DRYWALL_SLAB)
                 .add(ModBlocks.SOGGY_CARPET_SLAB)
+                .add(ModBlocks.CARDBOARD_SLAB)
                 .add(ModBlocks.IRON_GRATE_SLAB);
 
         valueLookupBuilder(BlockTags.WALLS)

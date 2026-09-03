@@ -1,6 +1,9 @@
 {
   "item.nullspaceunexplored.drywall_debris": "Drywall Debris",
   "item.nullspaceunexplored.reinforced_brick": "Reinforced Brick",
+  "item.nullspaceunexplored.light_panel": "Light Panel",
+  "item.nullspaceunexplored.cardboard": "Cardboard",
+  "item.nullspaceunexplored.ceiling_panel": "Ceiling Panel",
   "block.nullspaceunexplored.backrooms_wall_block": "Drywall Block",
   "block.nullspaceunexplored.drywall_slab": "Drywall Slab",
   "block.nullspaceunexplored.drywall_stairs": "Drywall Stairs",
@@ -15,5 +18,8 @@
   "block.nullspaceunexplored.reinforced_brick_block": "Reinforced Bricks",
   "block.nullspaceunexplored.iron_grate": "Iron Grate",
   "block.nullspaceunexplored.iron_grate_stairs": "Iron Grate Stairs",
-  "block.nullspaceunexplored.iron_grate_slab": "Iron Grate Slab"
+  "block.nullspaceunexplored.iron_grate_slab": "Iron Grate Slab",
+  "block.nullspaceunexplored.cardboard_block": "Cardboard Block",
+  "block.nullspaceunexplored.cardboard_stairs": "Cardboard Stairs",
+  "block.nullspaceunexplored.cardboard_slab": "Cardboard Slab"
 }

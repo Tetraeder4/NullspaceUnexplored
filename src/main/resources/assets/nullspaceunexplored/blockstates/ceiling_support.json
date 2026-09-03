@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=normal": {
+      "model": "nullspaceunexplored:block/ceiling_support"
+    },
+    "type=ceiling_panel": {
+      "model": "nullspaceunexplored:block/ceiling_panel"
+    },
+    "type=light_panel": {
+      "model": "nullspaceunexplored:block/light_ceiling_support"
+    }
+  }
+}

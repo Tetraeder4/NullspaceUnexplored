@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "cardboard",
+  "key": {
+    "#": "nullspaceunexplored:cardboard_block"
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "nullspaceunexplored:cardboard_stairs"
+  }
+}

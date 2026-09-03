@@ -21,6 +21,9 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.DRYWALL_DEBRIS);
                         output.accept(ModItems.REINFORCED_BRICK);
+                        output.accept(ModItems.LIGHT_PANEL);
+                        output.accept(ModItems.CARDBOARD);
+                        output.accept(ModItems.CEILING_PANEL);
                     }).build());
 
 
@@ -36,13 +39,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BACKROOMS_CARPET_BLOCK);
                         output.accept(ModBlocks.SOGGY_CARPET_STAIRS);
                         output.accept(ModBlocks.SOGGY_CARPET_SLAB);
+                        output.accept(ModBlocks.CARDBOARD_BLOCK);
+                        output.accept(ModBlocks.CARDBOARD_STAIRS);
+                        output.accept(ModBlocks.CARDBOARD_SLAB);
                         output.accept(ModBlocks.REINFORCED_BRICK_BLOCK);
                         output.accept(ModBlocks.IRON_GRATE);
                         output.accept(ModBlocks.IRON_GRATE_STAIRS);
                         output.accept(ModBlocks.IRON_GRATE_SLAB);
                         output.accept(ModBlocks.BACKROOMS_LAMP_BLOCK);
                         output.accept(ModBlocks.CEILING_SUPPORT);
-                        output.accept(ModBlocks.CEILING_PANEL);
                     }).build());
 
 

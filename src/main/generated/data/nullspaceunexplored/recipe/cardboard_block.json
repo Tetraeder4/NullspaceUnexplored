@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "cardboard",
+  "key": {
+    "C": "nullspaceunexplored:cardboard"
+  },
+  "pattern": [
+    "CC",
+    "CC"
+  ],
+  "result": {
+    "id": "nullspaceunexplored:cardboard_block"
+  }
+}

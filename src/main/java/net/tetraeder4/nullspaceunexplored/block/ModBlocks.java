@@ -11,7 +11,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
-import net.tetraeder4.nullspaceunexplored.block.custom.CeilingPanel;
 import net.tetraeder4.nullspaceunexplored.block.custom.CeilingSupport;
 
 import java.util.function.Function;
@@ -27,11 +26,9 @@ public class ModBlocks {
     public static final Block BACKROOMS_LAMP_BLOCK = registerBlock("backrooms_lamp_block",
             properties -> new BackroomsLampBlock(properties.strength(3f)
                     .requiresCorrectToolForDrops().lightLevel(state -> state.getValue(BackroomsLampBlock.CLICKED) ? 15 : 0)));
-    public static final Block CEILING_PANEL = registerBlock("ceiling_panel",
-                   properties -> new CeilingPanel(properties.strength(2f)
-                           .sound(SoundType.WOOL)));
     public static final Block CEILING_SUPPORT = registerBlock("ceiling_support",
             properties -> new CeilingSupport(properties.strength(8f).requiresCorrectToolForDrops().noOcclusion()
+                    .lightLevel(state -> (state.getValue(CeilingSupport.TYPE) == CeilingSupport.Type.LIGHT_PANEL) ? 15 : 0)
                             .sound(SoundType.CHAIN)));
     public static final Block REINFORCED_BRICK_BLOCK = registerBlock("reinforced_brick_block",
             properties -> new Block(properties.strength(18f).requiresCorrectToolForDrops()
@@ -39,6 +36,9 @@ public class ModBlocks {
     public static final Block IRON_GRATE = registerBlock("iron_grate",
             properties -> new Block(properties.requiresCorrectToolForDrops().noOcclusion()
                     .strength(8f).sound(SoundType.COPPER_GRATE)));
+    public static final Block CARDBOARD_BLOCK = registerBlock("cardboard_block",
+            properties -> new Block(properties.ignitedByLava()
+                    .strength(0.5f).sound(SoundType.SHELF)));
 
     // non full blocks
     public static final Block DRYWALL_STAIRS = registerBlock("drywall_stairs",
@@ -67,6 +67,12 @@ public class ModBlocks {
     public static final Block IRON_GRATE_SLAB = registerBlock("iron_grate_slab",
             properties -> new SlabBlock(properties.requiresCorrectToolForDrops().noOcclusion()
                     .strength(8f).sound(SoundType.COPPER_GRATE)));
+    public static final Block CARDBOARD_STAIRS = registerBlock("cardboard_stairs",
+            properties -> new StairBlock(ModBlocks.CARDBOARD_BLOCK.defaultBlockState(),
+                    properties.strength(0.5f).sound(SoundType.SHELF)));
+    public static final Block CARDBOARD_SLAB = registerBlock("cardboard_slab",
+            properties -> new SlabBlock(properties
+                    .strength(0.5f).sound(SoundType.SHELF)));
 
 
 

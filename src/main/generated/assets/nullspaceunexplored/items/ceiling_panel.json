@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "nullspaceunexplored:block/ceiling_panel"
+    "model": "nullspaceunexplored:item/ceiling_panel"
   }
 }

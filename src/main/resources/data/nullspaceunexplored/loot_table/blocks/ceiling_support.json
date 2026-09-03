@@ -1,0 +1,85 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nullspaceunexplored:ceiling_support",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "nullspaceunexplored:ceiling_support",
+              "properties": {
+                "type": "normal"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nullspaceunexplored:ceiling_support",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "nullspaceunexplored:ceiling_support",
+              "properties": {
+                "type": "ceiling_panel"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nullspaceunexplored:ceiling_support",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "nullspaceunexplored:ceiling_support",
+              "properties": {
+                "type": "light_panel"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nullspaceunexplored:reinforced_brick",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "nullspaceunexplored:ceiling_support",
+              "properties": {
+                "type": "ceiling_panel"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nullspaceunexplored:light_panel",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "nullspaceunexplored:ceiling_support",
+              "properties": {
+                "type": "light_panel"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
