@@ -101,18 +101,15 @@ public class CeilingSupport extends Block {
             InteractionHand hand,
             BlockHitResult hit
     ) {
-        // Nur NORMAL darf verändert werden
         if (state.getValue(TYPE) != Type.NORMAL) {
             return InteractionResult.PASS;
         }
 
         Type newType;
 
-        // Reinforced Brick -> Ceiling Panel
         if (stack.is(ModItems.CEILING_PANEL)) {
             newType = Type.CEILING_PANEL;
 
-            // Drywall Debris -> Light Panel
         } else if (stack.is(ModItems.LIGHT_PANEL)) {
             newType = Type.LIGHT_PANEL;
 
