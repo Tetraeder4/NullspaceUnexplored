@@ -74,6 +74,23 @@ public class ModBlocks {
             properties -> new SlabBlock(properties
                     .strength(0.5f).sound(SoundType.SHELF)));
 
+    //BLACK_MOULD
+    public static final Block BLACK_MOLD_1 = registerBlock("black_mold_1",
+            properties -> new GlowLichenBlock(
+                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+    public static final Block BLACK_MOLD_2 = registerBlock("black_mold_2",
+            properties -> new GlowLichenBlock(
+                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+    public static final Block BLACK_MOLD_3 = registerBlock("black_mold_3",
+            properties -> new GlowLichenBlock(
+                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+    public static final Block BLACK_MOLD_4 = registerBlock("black_mold_4",
+            properties -> new GlowLichenBlock(
+                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+    public static final Block BLACK_MOLD_5 = registerBlock("black_mold_5",
+            properties -> new GlowLichenBlock(
+                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {

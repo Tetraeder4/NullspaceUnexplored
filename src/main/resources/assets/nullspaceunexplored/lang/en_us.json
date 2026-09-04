@@ -21,5 +21,10 @@
   "block.nullspaceunexplored.iron_grate_slab": "Iron Grate Slab",
   "block.nullspaceunexplored.cardboard_block": "Cardboard Block",
   "block.nullspaceunexplored.cardboard_stairs": "Cardboard Stairs",
-  "block.nullspaceunexplored.cardboard_slab": "Cardboard Slab"
+  "block.nullspaceunexplored.cardboard_slab": "Cardboard Slab",
+  "block.nullspaceunexplored.black_mold_1": "Faint Black Mold",
+  "block.nullspaceunexplored.black_mold_2": "Spreading Black Mold",
+  "block.nullspaceunexplored.black_mold_3": "Dense Black Mold",
+  "block.nullspaceunexplored.black_mold_4": "Overgrown Black Mold",
+  "block.nullspaceunexplored.black_mold_5": "Infested Black Mold"
 }
