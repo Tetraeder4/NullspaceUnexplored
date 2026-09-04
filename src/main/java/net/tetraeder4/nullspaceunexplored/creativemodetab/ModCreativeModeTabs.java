@@ -48,6 +48,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.IRON_GRATE_SLAB);
                         output.accept(ModBlocks.BACKROOMS_LAMP_BLOCK);
                         output.accept(ModBlocks.CEILING_SUPPORT);
+                        output.accept(ModBlocks.BLACK_MOLD);
                     }).build());
 
 

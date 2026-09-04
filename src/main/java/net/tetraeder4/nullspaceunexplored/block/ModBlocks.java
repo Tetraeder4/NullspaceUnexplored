@@ -12,6 +12,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
 import net.tetraeder4.nullspaceunexplored.block.custom.CeilingSupport;
+import net.tetraeder4.nullspaceunexplored.block.custom.Mold;
 
 import java.util.function.Function;
 
@@ -73,6 +74,9 @@ public class ModBlocks {
     public static final Block CARDBOARD_SLAB = registerBlock("cardboard_slab",
             properties -> new SlabBlock(properties
                     .strength(0.5f).sound(SoundType.SHELF)));
+    public static final Block BLACK_MOLD = registerBlock("black_mold",
+            properties -> new Mold(
+                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
 
 
 

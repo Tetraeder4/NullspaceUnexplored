@@ -15,7 +15,6 @@ import net.minecraft.world.level.block.Block;
 import net.tetraeder4.nullspaceunexplored.block.ModBlocks;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
 import net.tetraeder4.nullspaceunexplored.item.ModItems;
-
 import static net.tetraeder4.nullspaceunexplored.NullspaceUnexplored.id;
 
 
