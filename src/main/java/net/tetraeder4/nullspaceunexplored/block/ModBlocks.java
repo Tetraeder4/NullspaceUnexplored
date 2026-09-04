@@ -12,7 +12,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
 import net.tetraeder4.nullspaceunexplored.block.custom.CeilingSupport;
-import net.tetraeder4.nullspaceunexplored.block.custom.Mold;
 
 import java.util.function.Function;
 
@@ -74,8 +73,22 @@ public class ModBlocks {
     public static final Block CARDBOARD_SLAB = registerBlock("cardboard_slab",
             properties -> new SlabBlock(properties
                     .strength(0.5f).sound(SoundType.SHELF)));
-    public static final Block BLACK_MOLD = registerBlock("black_mold",
-            properties -> new Mold(
+
+    //BLACK_MOULD
+    public static final Block BLACK_MOLD_1 = registerBlock("black_mold_1",
+            properties -> new GlowLichenBlock(
+                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+    public static final Block BLACK_MOLD_2 = registerBlock("black_mold_2",
+            properties -> new GlowLichenBlock(
+                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+    public static final Block BLACK_MOLD_3 = registerBlock("black_mold_3",
+            properties -> new GlowLichenBlock(
+                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+    public static final Block BLACK_MOLD_4 = registerBlock("black_mold_4",
+            properties -> new GlowLichenBlock(
+                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+    public static final Block BLACK_MOLD_5 = registerBlock("black_mold_5",
+            properties -> new GlowLichenBlock(
                     properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
 
 

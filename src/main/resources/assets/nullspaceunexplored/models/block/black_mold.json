@@ -1,6 +1,0 @@
-{
-  "parent": "nullspaceunexplored:block/template_cave_vine",
-  "textures": {
-    "texture": "nullspaceunexplored:block/black_mold"
-  }
-}

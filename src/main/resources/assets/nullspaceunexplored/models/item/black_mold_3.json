@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "nullspaceunexplored:block/black_mold_3"
+  }
+}
