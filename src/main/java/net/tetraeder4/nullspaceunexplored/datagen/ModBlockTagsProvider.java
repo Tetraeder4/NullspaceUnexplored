@@ -27,6 +27,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.IRON_GRATE_SLAB);
 
         valueLookupBuilder(BlockTags.MINEABLE_WITH_HOE)
+                .add(ModBlocks.MOLDY_CARPET_BLOCK)
                 .add(ModBlocks.BACKROOMS_CARPET_BLOCK)
                 .add(ModBlocks.SOGGY_CARPET_STAIRS)
                 .add(ModBlocks.SOGGY_CARPET_SLAB)

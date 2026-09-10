@@ -95,6 +95,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.REINFORCED_BRICK_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.BLUE_BACKROOMS_CARPET_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.MOLDY_CARPET_BLOCK);
 
         createCustomCube(
                 blockModelGenerators,
