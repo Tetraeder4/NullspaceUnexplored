@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.LIGHT_PANEL);
                         output.accept(ModItems.CARDBOARD);
                         output.accept(ModItems.CEILING_PANEL);
+                        output.accept(ModItems.MYSTERIOUS_FUNGUS);
                     }).build());
 
 
