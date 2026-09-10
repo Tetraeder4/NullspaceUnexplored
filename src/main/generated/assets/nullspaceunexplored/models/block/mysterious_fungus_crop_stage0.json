@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "nullspaceunexplored:block/mysterious_fungus_crop_stage0"
+  }
+}

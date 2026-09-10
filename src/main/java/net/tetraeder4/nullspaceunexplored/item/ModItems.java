@@ -6,9 +6,11 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.tetraeder4.nullspaceunexplored.NullspaceUnexplored;
+import net.tetraeder4.nullspaceunexplored.block.ModBlocks;
 
 import java.util.function.Function;
 
@@ -18,6 +20,10 @@ public class ModItems {
     public static final Item LIGHT_PANEL =registerItem("light_panel", Item::new);
     public static final Item CARDBOARD =registerItem("cardboard", Item::new);
     public static final Item CEILING_PANEL = registerItem("ceiling_panel", Item::new);
+
+    public static final Item MYSTERIOUS_FUNGUS_SPORES = registerItem("mysterious_fungus_spores",
+            properties -> new BlockItem(ModBlocks.MYSTERIOUS_FUNGUS_CROP, properties.useItemDescriptionPrefix()));
+
     public static final Item MYSTERIOUS_FUNGUS = registerItem("mysterious_fungus", Item::new);
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name),
