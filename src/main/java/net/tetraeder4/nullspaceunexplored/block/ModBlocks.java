@@ -2,6 +2,7 @@ package net.tetraeder4.nullspaceunexplored.block;
 
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.PushReaction;
 import net.tetraeder4.nullspaceunexplored.NullspaceUnexplored;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
 import net.tetraeder4.nullspaceunexplored.block.custom.CeilingSupport;
+import net.tetraeder4.nullspaceunexplored.block.custom.MysteriousFungusCropBlock;
 
 import java.util.function.Function;
 
@@ -96,12 +98,20 @@ public class ModBlocks {
             properties -> new Block(properties.strength(2f).speedFactor(0.6f)
                     .sound(SoundType.WET_SPONGE)));
 
+    public static final Block MYSTERIOUS_FUNGUS_CROP = registerBlockWithoutBlockItem("mysterious_fungus_crop",
+            properties -> new MysteriousFungusCropBlock(properties.noCollision().randomTicks().instabreak()
+                    .sound(SoundType.FUNGUS).pushReaction(PushReaction.DESTROY)));
 
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name))));
         registerBlockItem(name, toRegister);
+        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name), toRegister);
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Function<BlockBehaviour.Properties, Block> function) {
+        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name))));
         return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(NullspaceUnexplored.MOD_ID, name), toRegister);
     }
 

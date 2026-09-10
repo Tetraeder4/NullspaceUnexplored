@@ -1,19 +1,26 @@
 package net.tetraeder4.nullspaceunexplored.datagen;
 
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.*;
 import net.minecraft.client.renderer.block.dispatch.Variant;
 import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.tetraeder4.nullspaceunexplored.block.ModBlocks;
 import net.tetraeder4.nullspaceunexplored.block.custom.BackroomsLampBlock;
+import net.tetraeder4.nullspaceunexplored.block.custom.MysteriousFungusCropBlock;
 import net.tetraeder4.nullspaceunexplored.item.ModItems;
 import static net.tetraeder4.nullspaceunexplored.NullspaceUnexplored.id;
 
@@ -96,6 +103,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.REINFORCED_BRICK_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.BLUE_BACKROOMS_CARPET_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.MOLDY_CARPET_BLOCK);
+
+        blockModelGenerators.createCrossBlock(ModBlocks.MYSTERIOUS_FUNGUS_CROP, BlockModelGenerators.PlantType.NOT_TINTED, MysteriousFungusCropBlock.AGE, 0, 1, 2, 3);
 
         createCustomCube(
                 blockModelGenerators,
