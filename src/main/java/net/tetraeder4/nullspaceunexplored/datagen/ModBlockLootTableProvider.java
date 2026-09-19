@@ -69,7 +69,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
     public LootTable.Builder createCustomCropDrops(final Block original, final Item cropDrop, final Item seedDrop, final LootItemCondition.Builder isMaxAge, float minDrops, float maxDrops) {
         HolderLookup.RegistryLookup<Enchantment> enchantments = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
-        return (LootTable.Builder)this.applyExplosionDecay(original, LootTable.lootTable().withPool(LootPool.lootPool().add(((LootPoolSingletonContainer.Builder)LootItem.lootTableItem(cropDrop).apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops))).when(isMaxAge)).otherwise(LootItem.lootTableItem(seedDrop)))).withPool(LootPool.lootPool().when(isMaxAge).add(LootItem.lootTableItem(seedDrop).apply(ApplyBonusCount.addBonusBinomialDistributionCount(enchantments.getOrThrow(Enchantments.FORTUNE), 0.5714286F, 3)))));
+        return (LootTable.Builder)this.applyExplosionDecay(original, LootTable.lootTable().withPool(LootPool.lootPool().add(((LootPoolSingletonContainer.Builder<?>)LootItem.lootTableItem(cropDrop).apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops))).when(isMaxAge)).otherwise(LootItem.lootTableItem(seedDrop)))).withPool(LootPool.lootPool().when(isMaxAge).add(LootItem.lootTableItem(seedDrop).apply(ApplyBonusCount.addBonusBinomialDistributionCount(enchantments.getOrThrow(Enchantments.FORTUNE), 0.5714286F, 3)))));
     }
 
     public LootTable.Builder createMultipleDrops(final Block block, Item item, float minDrops, float maxDrops) {
