@@ -81,19 +81,19 @@ public class ModBlocks {
     //BLACK_MOLD
     public static final Block BLACK_MOLD_1 = registerBlock("black_mold_1",
             properties -> new GlowLichenBlock(
-                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+                    properties.strength(0.3f).sound(SoundType.FUNGUS).noOcclusion().noCollision()));
     public static final Block BLACK_MOLD_2 = registerBlock("black_mold_2",
             properties -> new GlowLichenBlock(
-                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+                    properties.strength(0.3f).sound(SoundType.FUNGUS).noOcclusion().noCollision()));
     public static final Block BLACK_MOLD_3 = registerBlock("black_mold_3",
             properties -> new GlowLichenBlock(
-                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+                    properties.strength(0.3f).sound(SoundType.FUNGUS).noOcclusion().noCollision()));
     public static final Block BLACK_MOLD_4 = registerBlock("black_mold_4",
             properties -> new GlowLichenBlock(
-                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+                    properties.strength(0.3f).sound(SoundType.FUNGUS).noOcclusion().noCollision()));
     public static final Block BLACK_MOLD_5 = registerBlock("black_mold_5",
             properties -> new GlowLichenBlock(
-                    properties.strength(0.3f).sound(SoundType.NYLIUM).noOcclusion().noCollision()));
+                    properties.strength(0.3f).sound(SoundType.FUNGUS).noOcclusion().noCollision()));
     public static final Block MOLDY_CARPET_BLOCK = registerBlock("moldy_carpet_block",
             properties -> new Block(properties.strength(2f).speedFactor(0.6f)
                     .sound(SoundType.WET_SPONGE)));
