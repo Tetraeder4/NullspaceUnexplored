@@ -47,8 +47,8 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         add(ModBlocks.IRON_GRATE_SLAB, this::createSlabItemTable);
         add(ModBlocks.CARDBOARD_SLAB, this::createSlabItemTable);
 
-        //crops TODO(change second to last into the fungus drop)
-        this.add(ModBlocks.MYSTERIOUS_FUNGUS_CROP, this.createCropDrops(ModBlocks.MYSTERIOUS_FUNGUS_CROP, ModItems.MYSTERIOUS_FUNGUS_SPORES, ModItems.MYSTERIOUS_FUNGUS_SPORES,
+        //crops
+        this.add(ModBlocks.MYSTERIOUS_FUNGUS_CROP, this.createCropDrops(ModBlocks.MYSTERIOUS_FUNGUS_CROP, ModItems.MYSTERIOUS_FUNGUS, ModItems.MYSTERIOUS_FUNGUS_SPORES,
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.MYSTERIOUS_FUNGUS_CROP)
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(MysteriousFungusCropBlock.AGE, MysteriousFungusCropBlock.MAX_AGE))));
     }
