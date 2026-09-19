@@ -41,6 +41,10 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.IRON_GRATE_STAIRS);
         dropSelf(ModBlocks.BLUE_BACKROOMS_CARPET_BLOCK);
 
+        //black mold
+        add(ModBlocks.BLACK_MOLD_3, createMultipleDrops(ModBlocks.BLACK_MOLD_3, ModItems.MYSTERIOUS_FUNGUS_SPORES, 0.0f, 1));
+        add(ModBlocks.BLACK_MOLD_4, createMultipleDrops(ModBlocks.BLACK_MOLD_4, ModItems.MYSTERIOUS_FUNGUS_SPORES, 0.0f, 2));
+        add(ModBlocks.BLACK_MOLD_5, createMultipleDrops(ModBlocks.BLACK_MOLD_5, ModItems.MYSTERIOUS_FUNGUS_SPORES, 0.0f, 3));
 
         //slabs
         add(ModBlocks.SOGGY_CARPET_SLAB, this::createSlabItemTable);
