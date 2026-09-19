@@ -62,5 +62,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.DRYWALL_WALL);
+
+        valueLookupBuilder(BlockTags.CROPS)
+                .add(ModBlocks.MYSTERIOUS_FUNGUS_CROP);
     }
 }
