@@ -4,7 +4,6 @@
   "item.nullspaceunexplored.light_panel": "Light Panel",
   "item.nullspaceunexplored.cardboard": "Cardboard",
   "item.nullspaceunexplored.ceiling_panel": "Ceiling Panel",
-  "item.nullspaceunexplored.mysterious_fungus": "Mysterious Fungus",
   "block.nullspaceunexplored.backrooms_wall_block": "Drywall Block",
   "block.nullspaceunexplored.drywall_slab": "Drywall Slab",
   "block.nullspaceunexplored.drywall_stairs": "Drywall Stairs",
@@ -31,5 +30,6 @@
   "block.nullspaceunexplored.black_mold_5": "Infested Black Mold",
   "block.nullspaceunexplored.blue_backrooms_carpet_block": "Blue Soggy Carpet Block",
   "block.nullspaceunexplored.mysterious_fungus_crop": "Obscure Vernum Crop",
-  "block.nullspaceunexplored.mysterious_fungus_spores": "Obscure Vernum Spores"
+  "item.nullspaceunexplored.mysterious_fungus_spores": "Obscure Vernum Spores",
+  "item.nullspaceunexplored.mysterious_fungus": "Obscure Vernum Shroom"
 }
