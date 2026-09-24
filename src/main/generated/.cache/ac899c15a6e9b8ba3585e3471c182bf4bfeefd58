@@ -2,8 +2,8 @@
 071f46a44d8efb4b5c2cdb6951346cbcfcf5d99e data/minecraft/tags/block/crops.json
 9a11ee47710b93a6ea46491d3c251e7f8584a455 data/minecraft/tags/block/mineable/axe.json
 015beb75d50a0e91bbf268a0cdfc8dbfe2b2303a data/minecraft/tags/block/mineable/hoe.json
-abf41e0261587f786d9541ca1c4382679c356eeb data/minecraft/tags/block/mineable/pickaxe.json
-1e8d6ac70eb051e18475ad0b09d2a597bcddee0e data/minecraft/tags/block/needs_iron_tool.json
+b52a10172b2731d1475ac2173c1ec0888fd93a44 data/minecraft/tags/block/mineable/pickaxe.json
+10a58f5356e7804e22fa41d8b0d23b088c094d18 data/minecraft/tags/block/needs_iron_tool.json
 0a165bfa21c558468291e90e0de79e9ea5ceed1c data/minecraft/tags/block/slabs.json
 9fd9d4a738178375ac72ea2bbedbaa52cc56e487 data/minecraft/tags/block/stairs.json
 0563eefe610e76661862015ec77f2872909fc6aa data/minecraft/tags/block/walls.json

@@ -7,6 +7,7 @@
     "nullspaceunexplored:reinforced_brick_block",
     "nullspaceunexplored:iron_grate",
     "nullspaceunexplored:iron_grate_stairs",
-    "nullspaceunexplored:iron_grate_slab"
+    "nullspaceunexplored:iron_grate_slab",
+    "nullspaceunexplored:clean_tile_block"
   ]
 }

@@ -56,6 +56,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLACK_MOLD_4);
                         output.accept(ModBlocks.BLACK_MOLD_5);
                         output.accept(ModBlocks.BLUE_BACKROOMS_CARPET_BLOCK);
+                        output.accept(ModBlocks.CLEAN_TILE_BLOCK);
                         output.accept(ModBlocks.MOLDY_CARPET_BLOCK);
                     }).build());
 

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 500,
+  "experience": 0.1,
+  "group": "clean tiles",
+  "ingredient": "minecraft:white_concrete_powder",
+  "result": {
+    "id": "nullspaceunexplored:clean_tile_block"
+  }
+}

@@ -43,6 +43,9 @@ public class ModBlocks {
                     .strength(0.5f).sound(SoundType.SHELF)));
     public static final Block BLUE_BACKROOMS_CARPET_BLOCK = registerBlock("blue_backrooms_carpet_block",
             properties ->  new Block(properties.strength(2f).speedFactor(0.8f).sound(SoundType.WET_SPONGE)));
+    public static final Block CLEAN_TILE_BLOCK = registerBlock("clean_tile_block",
+            properties ->  new Block(properties.strength(5f).sound(SoundType.DEEPSLATE_TILES).requiresCorrectToolForDrops()));
+
 
     // non full blocks
     public static final Block DRYWALL_STAIRS = registerBlock("drywall_stairs",

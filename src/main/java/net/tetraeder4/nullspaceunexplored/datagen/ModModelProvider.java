@@ -103,6 +103,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.REINFORCED_BRICK_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.BLUE_BACKROOMS_CARPET_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.MOLDY_CARPET_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.CLEAN_TILE_BLOCK);
 
         blockModelGenerators.createCrossBlock(ModBlocks.MYSTERIOUS_FUNGUS_CROP, BlockModelGenerators.PlantType.NOT_TINTED, MysteriousFungusCropBlock.AGE, 0, 1, 2, 3);
 

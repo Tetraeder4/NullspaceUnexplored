@@ -24,7 +24,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.REINFORCED_BRICK_BLOCK)
                 .add(ModBlocks.IRON_GRATE)
                 .add(ModBlocks.IRON_GRATE_STAIRS)
-                .add(ModBlocks.IRON_GRATE_SLAB);
+                .add(ModBlocks.IRON_GRATE_SLAB)
+                .add(ModBlocks.CLEAN_TILE_BLOCK);
 
         valueLookupBuilder(BlockTags.MINEABLE_WITH_HOE)
                 .add(ModBlocks.MOLDY_CARPET_BLOCK)
@@ -44,9 +45,10 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.DRYWALL_SLAB)
                 .add(ModBlocks.DRYWALL_WALL)
                 .add(ModBlocks.REINFORCED_BRICK_BLOCK)
+                .add(ModBlocks.CLEAN_TILE_BLOCK)
                 .add(ModBlocks.IRON_GRATE)
                 .add(ModBlocks.IRON_GRATE_STAIRS)
-                .add(ModBlocks.IRON_GRATE_SLAB);;
+                .add(ModBlocks.IRON_GRATE_SLAB);
 
         valueLookupBuilder(BlockTags.STAIRS)
                 .add(ModBlocks.DRYWALL_STAIRS)

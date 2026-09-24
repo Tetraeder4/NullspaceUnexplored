@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Blocks;
 import net.tetraeder4.nullspaceunexplored.block.ModBlocks;
 import net.tetraeder4.nullspaceunexplored.item.ModItems;
 import org.jspecify.annotations.NonNull;
@@ -30,6 +31,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 oreSmelting(List.of(ModBlocks.BACKROOMS_CARPET_BLOCK), RecipeCategory.BUILDING_BLOCKS, CookingBookCategory.BLOCKS, Items.YELLOW_WOOL, 0.1f, 200, "soggy carpet");
                 oreSmelting(List.of(Items.BRICK), RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.REINFORCED_BRICK, 0.1f, 200, "reinforced bricks");
                 //just fyi: nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.DRYWALL_DEBRIS, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BACKROOMS_WALL_BLOCK);
+
+                oreBlasting(List.of(Blocks.WHITE_CONCRETE_POWDER), RecipeCategory.BUILDING_BLOCKS, CookingBookCategory.BLOCKS, ModBlocks.CLEAN_TILE_BLOCK, 0.1f, 500, "clean tiles");
 
                 shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BACKROOMS_CARPET_BLOCK, 8)
                         .pattern("WWW")
