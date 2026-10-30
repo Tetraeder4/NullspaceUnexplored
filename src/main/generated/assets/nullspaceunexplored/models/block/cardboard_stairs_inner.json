@@ -2,7 +2,7 @@
   "parent": "minecraft:block/inner_stairs",
   "textures": {
     "bottom": "nullspaceunexplored:block/cardboard_block_top",
-    "side": "nullspaceunexplored:block/cardboard_block_side",
+    "side": "nullspaceunexplored:block/cardboard_block_front",
     "top": "nullspaceunexplored:block/cardboard_block_top"
   }
 }

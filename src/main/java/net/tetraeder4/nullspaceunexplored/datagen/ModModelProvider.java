@@ -67,24 +67,11 @@ public class ModModelProvider extends FabricModelProvider {
         );
     }
 
-    private static void createCustomStairs(
-            BlockModelGenerators generators,
-            Block stairsBlock,
-            Identifier top,
-            Identifier bottom,
-            Identifier north,
-            Identifier south,
-            Identifier east,
-            Identifier west
-    ) {
+    private static void createCustomStairs(BlockModelGenerators generators, Block stairsBlock, Identifier front, Identifier top) {
         TextureMapping mapping = new TextureMapping()
                 .put(TextureSlot.TOP, new Material(top, false))
-                .put(TextureSlot.BOTTOM, new Material(bottom, false))
-                .put(TextureSlot.FRONT, new Material(north, false))
-                .put(TextureSlot.BACK, new Material(south, false))
-                .put(TextureSlot.SIDE, new Material(east, false))
-                .put(TextureSlot.SIDE, new Material(west, false))
-                .put(TextureSlot.PARTICLE, new Material(top, false));
+                .put(TextureSlot.BOTTOM, new Material(top, false))
+                .put(TextureSlot.SIDE, new Material(front, false));
 
         Identifier stairs = ModelTemplates.STAIRS_STRAIGHT.create(stairsBlock, mapping, generators.modelOutput);
         Identifier stairsInner = ModelTemplates.STAIRS_INNER.create(stairsBlock, mapping, generators.modelOutput);
@@ -92,9 +79,18 @@ public class ModModelProvider extends FabricModelProvider {
 
         BlockModelGenerators.createStairs(
                 stairsBlock,
-                new MultiVariant(WeightedList.<Variant>builder().add(new Variant(stairs)).build()),
-                new MultiVariant(WeightedList.<Variant>builder().add(new Variant(stairsInner)).build()),
-                new MultiVariant(WeightedList.<Variant>builder().add(new Variant(stairsOuter)).build())
+                new MultiVariant(WeightedList.of(new Variant(stairsInner))),
+                new MultiVariant(WeightedList.of(new Variant(stairs))),
+                new MultiVariant(WeightedList.of(new Variant(stairsOuter)))
+        );
+
+        generators.blockStateOutput.accept(
+                BlockModelGenerators.createStairs(
+                        stairsBlock,
+                        BlockModelGenerators.plainVariant(stairsInner),
+                        BlockModelGenerators.plainVariant(stairs),
+                        BlockModelGenerators.plainVariant(stairsOuter)
+                )
         );
     }
 
@@ -121,12 +117,8 @@ public class ModModelProvider extends FabricModelProvider {
         createCustomStairs(
                 blockModelGenerators,
                 ModBlocks.CARDBOARD_STAIRS,
-                id("block/cardboard_block_top"),
-                id("block/cardboard_block_top"),
                 id("block/cardboard_block_front"),
-                id("block/cardboard_block_front"),
-                id("block/cardboard_block_side"),
-                id("block/cardboard_block_side")
+                id("block/cardboard_block_top")
         );
 
         blockModelGenerators.family(ModBlocks.BACKROOMS_WALL_BLOCK)
