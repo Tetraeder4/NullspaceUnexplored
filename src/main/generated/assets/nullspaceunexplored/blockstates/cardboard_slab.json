@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nullspaceunexplored:block/cardboard_slab"
+    },
+    "type=double": {
+      "model": "nullspaceunexplored:block/cardboard_slab_full"
+    },
+    "type=top": {
+      "model": "nullspaceunexplored:block/cardboard_slab_top"
+    }
+  }
+}

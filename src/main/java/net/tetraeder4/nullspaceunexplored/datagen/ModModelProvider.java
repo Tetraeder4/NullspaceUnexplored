@@ -94,6 +94,36 @@ public class ModModelProvider extends FabricModelProvider {
         );
     }
 
+    private static void createCustomSlab(BlockModelGenerators generators, Block slabBlock, Identifier front, Identifier top) {
+        TextureMapping mapping = new TextureMapping()
+                .put(TextureSlot.TOP, new Material(top, false))
+                .put(TextureSlot.BOTTOM, new Material(top, false))
+                .put(TextureSlot.UP, new Material(top, false))
+                .put(TextureSlot.DOWN, new Material(top, false))
+                .put(TextureSlot.SIDE, new Material(front, false))
+                .put(TextureSlot.PARTICLE, new Material(top, false));
+
+        Identifier slabTop = ModelTemplates.SLAB_TOP.create(slabBlock, mapping, generators.modelOutput);
+        Identifier slabBottom = ModelTemplates.SLAB_BOTTOM.create(slabBlock, mapping, generators.modelOutput);
+        Identifier slabFull = ModelTemplates.CUBE.create(ModelLocationUtils.getModelLocation(slabBlock, "_full"), mapping, generators.modelOutput);
+
+        BlockModelGenerators.createSlab(
+                slabBlock,
+                new MultiVariant(WeightedList.of(new Variant(slabBottom))),
+                new MultiVariant(WeightedList.of(new Variant(slabTop))),
+                new MultiVariant(WeightedList.of(new Variant(slabFull)))
+        );
+
+        generators.blockStateOutput.accept(
+                BlockModelGenerators.createSlab(
+                        slabBlock,
+                        BlockModelGenerators.plainVariant(slabBottom),
+                        BlockModelGenerators.plainVariant(slabTop),
+                        BlockModelGenerators.plainVariant(slabFull)
+                )
+        );
+    }
+
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.REINFORCED_BRICK_BLOCK);
@@ -117,6 +147,13 @@ public class ModModelProvider extends FabricModelProvider {
         createCustomStairs(
                 blockModelGenerators,
                 ModBlocks.CARDBOARD_STAIRS,
+                id("block/cardboard_block_front"),
+                id("block/cardboard_block_top")
+        );
+
+        createCustomSlab(
+                blockModelGenerators,
+                ModBlocks.CARDBOARD_SLAB,
                 id("block/cardboard_block_front"),
                 id("block/cardboard_block_top")
         );
